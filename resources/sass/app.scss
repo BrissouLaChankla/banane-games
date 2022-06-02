@@ -1,0 +1,21 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito&display=swap');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+@import'@splidejs/splide/dist/css/splide.min.css';
+
+@import 'splide';
+@import 'setup';
+@import 'layout';
+@import 'buttons';
+@import 'keyframes';
+
+
+// Main
+@import 'main';
+

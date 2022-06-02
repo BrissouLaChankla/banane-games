@@ -1,0 +1,61 @@
+// :root {
+//     --main-color-dark: #ff6209;
+//     --main-color: #fd6c12;
+//     --main-color-light: #ffa36f;
+//     --main-color-lighter: #fee8db;
+//     --red:red;
+//     --green:green;
+// }
+
+
+:root {
+    --main-color-dark: #1899d6;
+    --main-color: #1cb0f6;
+    --main-color-light: #48bff7;
+    --main-color-lighter: #ddf4ff;
+    --red:red;
+    --green:green;
+}
+
+
+#app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    main {
+        flex: 1;
+        // Equals the height of the fixed nav
+        margin-top:78px;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+.form-control {
+    font-family: $fredoka-font-family;
+}
+
+a{
+    text-decoration: none;
+}
+
+p {
+    font-size: 1rem;
+}
+
+.black_white {
+    filter:grayscale(1);
+}
+
+.form-control {
+    border-radius: 12px;
+    &::placeholder {
+        opacity: .5;
+    }
+}
+

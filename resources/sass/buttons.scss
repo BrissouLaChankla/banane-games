@@ -1,0 +1,36 @@
+.btn {
+    padding: 0.75rem 2.25rem;
+    border-radius: 12px;
+    border: 0;
+
+    font-family: $fredoka-font-family;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+
+    &:active {
+        border-bottom:0;
+        transform: translateY(5px);
+        // Equals the translate value to avoid everything to move
+        margin-bottom: 5px;
+    }
+}
+.btn-primary {
+    background-color: var(--main-color);
+    color: white;
+
+    border-bottom: 5px solid var(--main-color-dark);
+
+    &:hover {
+        background-color: var(--main-color-light);
+    }
+}
+
+.btn-white {
+    background-color: white;
+    color: var(--main-color);
+
+    border-bottom: 5px solid var(--main-color-lighter);
+    &:hover {
+        color: var(--main-color-light);
+    }
+}

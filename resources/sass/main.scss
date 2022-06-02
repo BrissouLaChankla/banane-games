@@ -1,0 +1,135 @@
+.bg-lighter {
+    background-color: var(--main-color-lighter);
+}
+
+#triptique {
+    img { 
+        width: 40px;
+    }
+}
+
+// Liste des jeux
+.game-thumb {
+    height:320px;
+    background-position: center;
+    background-size:cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+
+    position: relative;
+    .matiere {
+        position: absolute;
+        bottom: 8px;
+        right: 10px;
+        color:white;
+
+        transform: translateY(50px);
+        transition: all .3s ease;
+    }
+
+    &:hover { 
+        .matiere {
+            transform: translate(0);
+        }
+    }
+}
+
+// Game posters
+
+.status {
+    position: relative;
+    padding-left:18px;
+    &:before{
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-radius: 50px;
+        left: 0;
+        top: 4px;
+     
+        transform: scale(1);
+    }
+    &.unavailable:before{
+        background:var(--red);
+        box-shadow: 0 0 0 0 var(--red);
+    }
+    &.available:before {
+        background:var(--green);
+        box-shadow: 0 0 0 0 var(--green);
+        -webkit-animation: pulse 3s infinite;
+                animation: pulse 3s infinite;
+      }
+}
+
+// on single game page
+.small {
+    max-width:1100px;
+    margin: auto;
+    img {
+        height:280px;
+    }
+}
+
+// Bannière pub PNE 
+#nanabanner {
+    overflow: hidden;
+    position: relative;
+    .righ-pic {
+        top: -50px;
+        position: absolute;
+        height: 500px;
+    }
+}
+
+// Game
+
+.header-game {
+    height:200px;
+
+    color:white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    background-position: center;
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-attachment: fixed;
+}
+
+@media screen and (min-width: 992px) {
+    .right-game-desc {
+        height:calc(100% - 85px);
+        display: flex;
+        flex-direction:column;
+        justify-content: center;
+    }
+}
+
+
+
+// Contact
+
+#contact { 
+    min-height: 80vh;
+    background-image:url("/img/contact/nanagames_wallpaper_contact.svg");
+    background-repeat:no-repeat;
+    background-size: 33%;
+    background-position: top right;
+}
+
+#list-pj {
+    overflow-y: auto;
+}
+
+.add-file-img-contact {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    width: 20px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
