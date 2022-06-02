@@ -19,12 +19,11 @@
 
 <body>
     <div id="app">
-        @include('layouts.nav')
+        @include('adminlayouts.nav')
         <main>
             @yield('content')
         </main>
-        @yield('prefooter')
-        @include('layouts.footer')
+        @include('adminlayouts.footer')
     </div>
     @stack('scripts')
 </body>
