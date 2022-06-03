@@ -29,7 +29,7 @@ Route::controller(GameController::class)->prefix('jeux')->group(function () {
     Route::get('/{slug}', 'showGame')->name('show-game');
 });
 
-Route::controller(DashboardController::class)->prefix('admin')->group(function () {
+Route::controller(DashboardController::class)->prefix('admin')->middleware('auth')->group(function () {
     Route::get('/', 'showDashboard')->name('show-dashboard-admin');
 });
 
