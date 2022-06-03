@@ -16,6 +16,10 @@ class Admin
      */
     public function handle(Request $request, Closure $next)
     {
-        return $next($request);
+
+        if ($request->user()->admin) {
+            return $next('/admin');
+        }
+        return redirect()->back()->with('message', 'unauthorised access');
     }
 }
