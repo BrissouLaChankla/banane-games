@@ -1,10 +1,12 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\GameController;
 use App\Http\Controllers\BlogController;
-use App\Http\Controllers\ContactController;
+use App\Http\Controllers\GameController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\NewsletterController;
 
 /*
@@ -25,6 +27,10 @@ Route::get('/', [HomeController::class, 'showHome'])->name('welcome');
 
 Route::controller(GameController::class)->prefix('jeux')->group(function () {
     Route::get('/{slug}', 'showGame')->name('show-game');
+});
+
+Route::controller(DashboardController::class)->prefix('admin')->middleware('auth')->group(function () {
+    Route::get('/', 'showDashboard')->name('show-dashboard-admin');
 });
 
 Route::controller(BlogController::class)->prefix('actualites')->group(function () {
