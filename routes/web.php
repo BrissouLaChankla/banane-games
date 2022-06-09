@@ -8,6 +8,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\NewsletterController;
+use App\Http\Controllers\AboutController;
 
 /*
 |--------------------------------------------------------------------------
@@ -39,6 +40,8 @@ Route::controller(BlogController::class)->prefix('actualites')->group(function (
 });
 
 Route::post('/add-email-newsletter', [NewsletterController::class, 'AddEmailNewsletter'])->name('add-email-newsletter');
+
+Route::get('/a-propos', [AboutController::class, 'showAbout'])->name('show-about');
 
 Route::get('/contact', [ContactController::class, 'showContact'])->name('show-contact');
 Route::post('/send-mail', [ContactController::class, 'sendMail'])->name('send-mail');
