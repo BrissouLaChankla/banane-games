@@ -64,9 +64,6 @@
     </div>
 @endsection
 
-@section('prefooter')
-    @include('layouts.prefooter')
-@endsection
 
 @push('scripts')
     <script defer>

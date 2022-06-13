@@ -16,11 +16,11 @@ class NewsletterController extends Controller
         ]);
         
         if ($validator->fails()) {
-            return redirect(url()->previous() . '#prefooter')->withErrors($validator)->withInput();
+            return redirect(url()->previous() . '#footer')->withErrors($validator)->withInput();
         } else {
             // Only happening when there is a new subscriber
             $newsletter = Newsletter::create($request->all());
-            return  redirect(url()->previous().'#prefooter')->with('newsletter-success', 'Vous êtes bien enregistré dans notre Newsletter. Bienvenue !');
+            return  redirect(url()->previous().'#footer')->with('newsletter-success', 'Vous êtes bien enregistré dans notre Newsletter. Bienvenue !');
         }
     }
 }

@@ -43,6 +43,7 @@ Route::post('/add-email-newsletter', [NewsletterController::class, 'AddEmailNews
 
 Route::get('/a-propos', [AboutController::class, 'showAbout'])->name('show-about');
 
+
 Route::get('/contact', [ContactController::class, 'showContact'])->name('show-contact');
 Route::post('/send-mail', [ContactController::class, 'sendMail'])->name('send-mail');
 

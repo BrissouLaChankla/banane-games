@@ -44,7 +44,5 @@
     @include('sections.lastarticles')
 
     
-    @section('prefooter')
-        @include('layouts.prefooter')
-    @endsection
+ 
 @endsection
