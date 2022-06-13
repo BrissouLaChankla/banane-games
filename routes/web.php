@@ -9,6 +9,7 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\NewsletterController;
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\WordController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,9 +31,26 @@ Route::controller(GameController::class)->prefix('jeux')->group(function () {
     Route::get('/{slug}', 'showGame')->name('show-game');
 });
 
-Route::controller(DashboardController::class)->prefix('admin')->middleware('auth')->group(function () {
-    Route::get('/', 'showDashboard')->name('show-dashboard-admin');
+Route::prefix('admin')->middleware('auth')->group(function () {
+
+    Route::controller(DashboardController::class)->group(function() {
+        Route::get('/', 'showDashboard')->name('show-dashboard-admin');
+    });
+
+
+    Route::prefix('modules')->group(function() {
+        Route::prefix('words')->controller(WordController::class)->group(function() {
+
+            Route::get('/', 'showWords')->name('show-modules-words');
+            Route::post('/edit-word', 'editWords')->name('edit-modules-words');
+
+        });
+    });
+
 });
+
+
+
 
 Route::controller(BlogController::class)->prefix('actualites')->group(function () {
     Route::get('/', 'showBlog')->name('show-blog');
