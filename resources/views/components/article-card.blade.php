@@ -15,7 +15,7 @@
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem similique assumenda non quidem nesciunt optio, praesentium ipsam nulla, atque excepturi qui quasi et a ab eos mollitia sunt facere deleniti.
         </p>
 
-        <a href="#" class="text-primary text-decoration-underline fs-5">
+        <a href="#" class="text-primary fw-bold text-decoration-underline fs-5">
             Lire la suite
         </a>
 

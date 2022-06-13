@@ -5,7 +5,7 @@
         <div class="spacer-24 d-block d-lg-none"></div>
         <div class="row">
             <div class="col-lg-3">
-                <div class="mb-5">
+                <div class="mb-4">
                     <h3 class="mb-lg-4">Découvrez-nous</h3>
                     <div class="d-flex flex-column align-items-start">
                         <a href="#">Nanaba</a>
@@ -14,7 +14,7 @@
             </div>
 
             <div class="col-lg-3">
-                <div class="mb-5">
+                <div class="mb-4">
                     <h3 class="mb-lg-4">Contact</h3>
                     <div class="d-flex flex-column align-items-start">
                         <a href="#">Nous contacter</a>
@@ -24,7 +24,7 @@
             </div>
 
             <div class="col-lg-3">
-                <div class="mb-5">
+                <div class="mb-4">
                     <h3 class="mb-lg-4">Suivez nous</h3>
                     <div class="text-nowrap">
                         <a href="https://www.facebook.com/nanabaofficiel/" class="me-4 me-lg-3"><img
@@ -42,7 +42,7 @@
             </div>
 
             <div class="col-lg-3">
-                <div class="mb-5">
+                <div class="mb-4">
 
                 <h3 class="mb-lg-4">S’inscrire à la newsletter</h3>
                     {!! Form::open(['url' => route('add-email-newsletter'), 'class' => 'd-flex']) !!}
@@ -76,9 +76,9 @@
         <div class="spacer-24 d-block d-lg-none"></div>
 
         <div class="d-flex flex-column flex-lg-row justify-content-center">
-            <a href="#" class="pb-3 px-lg-3 fw-bold">Mentions légales</a>
-            <a href="#" class="pb-3 px-lg-3 fw-bold">Chartes des cookies</a>
-            <a href="#" class="pb-3 px-lg-3 fw-bold">CGV / CGU</a>
+            <a href="#" class="mb-3 mb-lg-0 mx-lg-3 fw-bold">Mentions légales</a>
+            <a href="#" class="mb-3 mb-lg-0 mx-lg-3 fw-bold">Chartes des cookies</a>
+            <a href="#" class="mb-3 mb-lg-0 mx-lg-3 fw-bold">CGV / CGU</a>
         </div>
 
 
