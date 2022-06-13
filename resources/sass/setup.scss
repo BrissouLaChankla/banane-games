@@ -9,10 +9,11 @@
 
 
 :root {
-    --main-color-dark: #1899d6;
-    --main-color: #1cb0f6;
-    --main-color-light: #48bff7;
-    --main-color-lighter: #ddf4ff;
+    --main-color-dark: #B15301;
+    --main-color: #fd7f12;
+    --main-color-light: #FD9A44;
+    --main-color-lighter: #FFF7F0;
+    --secondary: #ffd800;
     --red:red;
     --green:green;
 }
@@ -34,11 +35,65 @@ h2,
 h3,
 h4,
 h5,
-h6,
-a,
-.form-control {
+h6 {
     font-family: $fredoka-font-family;
 }
+h1,.h1-font-size {
+    // 42px
+    font-size:2.625rem;
+}
+h2,.h2-font-size {
+    // 32px
+    font-size:2rem;
+}
+h3.h3-font-size {
+    // 24px
+    font-size:1.5rem;
+}
+a,button,.btn {
+    // 18px
+    font-size:1.125rem;
+}
+p {
+    // 16px
+    font-size:1rem;
+}
+
+.card-title {
+    font-family: $font-family-base!important;
+    font-weight: 700;
+    font-size: 1.125rem;
+    line-height: 24px;
+    letter-spacing: .72px;
+}
+
+.card-text {
+    line-height: 1.75;
+    letter-spacing: 0.64px;
+}
+.mw-300{
+    max-width: 300px;
+}
+.spacer {
+    display: block;
+    &-96 {
+        height: 96px;
+    }
+    &-72 {
+        height: 72px;
+    }
+    &-56{
+        height: 56px;
+    }
+    &-48 {
+        height: 48px;
+    }
+    &-24 {
+        height: 24px;
+    }
+}
+
+
 
 a{
     text-decoration: none;
@@ -47,6 +102,11 @@ a{
 p {
     font-size: 1rem;
 }
+
+.font-title {
+  font-family: $fredoka-font-family;
+}
+
 
 .black_white {
     filter:grayscale(1);

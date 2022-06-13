@@ -24,7 +24,6 @@
         <main>
             @yield('content')
         </main>
-        @yield('prefooter')
         @include('layouts.footer')
     </div>
     @stack('scripts')
