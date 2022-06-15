@@ -10,6 +10,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\NewsletterController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\WordController;
+use App\Http\Controllers\ArticleController;
 
 /*
 |--------------------------------------------------------------------------
@@ -60,6 +61,8 @@ Route::controller(BlogController::class)->prefix('actualites')->group(function (
 Route::post('/add-email-newsletter', [NewsletterController::class, 'AddEmailNewsletter'])->name('add-email-newsletter');
 
 Route::get('/a-propos', [AboutController::class, 'showAbout'])->name('show-about');
+
+Route::get('/article', [ArticleController::class, 'showArticle'])->name('show-article');
 
 
 Route::get('/contact', [ContactController::class, 'showContact'])->name('show-contact');

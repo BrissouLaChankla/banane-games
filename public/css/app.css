@@ -11424,7 +11424,7 @@ h2, .h2, .h2-font-size {
   font-size: 2rem;
 }
 
-h3.h3-font-size, .h3-font-size.h3 {
+h3, .h3, .h3-font-size {
   font-size: 1.5rem;
 }
 
@@ -11511,6 +11511,42 @@ p {
 .object-fit {
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.img-article {
+  width: 606px;
+  height: 386px;
+}
+
+.video-article {
+  width: 800px;
+  height: 400px;
+}
+
+.splide__slide {
+  width: 1300px;
+  height: 364px;
+}
+
+.splide__arrow--prev {
+  left: -2.5em;
+}
+
+.splide__arrow--next {
+  right: -2.5em;
+}
+
+@media all and (max-width: 768px) {
+  .splide__arrows {
+    display: none;
+  }
+}
+.splide__pagination__page {
+  background-color: #fd7f12 !important;
+}
+
+.splide__arrow svg {
+  fill: #fd7f12 !important;
 }
 
 footer .nanagames {
