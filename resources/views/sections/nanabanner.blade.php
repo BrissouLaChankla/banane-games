@@ -1,17 +1,20 @@
-<div id="nanabanner" class="bg-primary text-white p-5">
+<div id="nanabanner" class="bg-lighter text-white py-9">
     <div class="container">
-        <div class="row">
-            <div class="col-md-8">
-                <h3 class="mb-4 mb-md-2">On t'a déjà parlé de notre PNE ?</h3>
-                <p>
+        <div class="row align-items-center">
+            <div class="col-md-7 position-relative">
+                <img class="top-left-pop" src="{{asset('img/decorations/left-corner-pop.webp')}}" alt="Image pop effect">
+                <h2 class="text-primary mb-4">On t’a déja parlé de <x-underlined word="Nanaba"/> ?</h2>
+                <p class="mb-7 subtext">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, praesentium cupiditate sint ipsum quasi earum deleniti alias voluptate autem excepturi maiores obcaecati vel vero non! Veritatis quas voluptatem alias cupiditate.
                 </p>
                 <a href="https://nanaba.tech" target="_blank">
-                    <x-button class="mt-3" name="Découvrir" color="white" />
+                    <x-button name="Découvrir l'app" color="primary" />
                 </a>
             </div>
-            <div class="d-none d-md-block col-md-4">
-                <img src="{{ asset('img/mister-nanaba/banner.webp') }}" loading="lazy" class="righ-pic" alt="">
+            <div class="col-md-5 d-none d-md-block">
+                <div class="text-end">
+                    <img src="{{ asset('img/designs/blocage.webp') }}" loading="lazy" class="right-pic ms-md-auto img-fluid" alt="">
+                </div>
             </div>
         </div>
     </div>

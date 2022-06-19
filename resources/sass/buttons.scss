@@ -3,9 +3,9 @@
     border-radius: 12px;
     border: 0;
 
-    font-family: $fredoka-font-family;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
+    font-family: $font-family-base;
+    font-weight: bold;
+    letter-spacing: .8px;
 
     &:active {
         border-bottom:0;

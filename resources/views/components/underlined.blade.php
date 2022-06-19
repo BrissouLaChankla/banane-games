@@ -1,0 +1,1 @@
+<span class="position-relative">{{$word}} <img src="{{asset("img/decorations/yellow-underline.webp")}}" class="yellow-underline" alt="Soulignage Jaune"></span>
