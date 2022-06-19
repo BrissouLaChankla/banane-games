@@ -13511,7 +13511,7 @@ textarea.form-control-lg {
 }
 #app main {
   flex: 1;
-  margin-top: 78px;
+  margin-top: 85px;
 }
 
 h1, .h1,
@@ -13602,6 +13602,10 @@ a {
   font-family: "Fredoka One", cursive;
 }
 
+.font-base {
+  font-family: "Poppins", sans-serif;
+}
+
 .black_white {
   filter: grayscale(1);
 }
@@ -13634,19 +13638,18 @@ a {
   height: 400px;
 }
 
-.splide__arrow--prev {
+.outside_arrows .splide__arrow--prev {
   left: -2.5em;
 }
-
-.splide__arrow--next {
+.outside_arrows .splide__arrow--next {
   right: -2.5em;
 }
-
 @media all and (max-width: 768px) {
-  .splide__arrows {
+  .outside_arrows .splide__arrows {
     display: none;
   }
 }
+
 .splide__pagination__page {
   background-color: #fd7f12 !important;
 }
@@ -13843,8 +13846,6 @@ nav a:hover img {
 }
 
 .header-game {
-  height: 200px;
-  color: white;
   display: flex;
   align-items: center;
   justify-content: center;

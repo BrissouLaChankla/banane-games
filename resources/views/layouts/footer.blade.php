@@ -1,4 +1,4 @@
-<footer id="footer" class="py-5 bg-primary text-white  text-lg-start">
+<footer id="footer" class="py-5 bg-primary text-white mt-10 text-lg-start">
     <div class="container-lg px-5 px-lg-0">
         <span class="nanagames text-secondary font-title">Nanagames</span>
         <div class="row mt-3 mt-lg-8">

@@ -40,7 +40,7 @@
     main {
         flex: 1;
         // Equals the height of the fixed nav
-        margin-top:78px;
+        margin-top:85px;
     }
 }
 
@@ -129,6 +129,10 @@ a{
   font-family: $fredoka-font-family;
 }
 
+.font-base {
+    font-family: $font-family-base;
+}
+
 
 .black_white {
     filter:grayscale(1);
@@ -157,23 +161,20 @@ a{
 
 
 
-
-
-
-.splide__arrow--prev {
-    left: -2.5em;
+.outside_arrows {
+    .splide__arrow--prev {
+        left: -2.5em;
+    }
     
-}
-
-.splide__arrow--next {
-    right: -2.5em;
+    .splide__arrow--next {
+        right: -2.5em;
+    }
     
-}
-
-@media all and (max-width: 768px) {
-	.splide__arrows {
-		display: none;
-	}
+    @media all and (max-width: 768px) {
+        .splide__arrows {
+            display: none;
+        }
+    }
 }
 
 .splide__pagination__page {

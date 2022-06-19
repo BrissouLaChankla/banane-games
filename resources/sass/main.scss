@@ -101,9 +101,6 @@
 // Game
 
 .header-game {
-    height:200px;
-
-    color:white;
 
     display: flex;
     align-items: center;
@@ -114,6 +111,7 @@
     background-size: cover;
     background-repeat:no-repeat;
     background-attachment: fixed;
+
 }
 
 // @media screen and (min-width: 992px) {
