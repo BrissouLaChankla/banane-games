@@ -1,6 +1,6 @@
-<div class="container pt-8 pb-10">
+<div class="container pt-8">
     <h2 class="text-primary text-center mb-7">Les derniers articles</h2>
-    <div class="splide" role="group">
+    <div class="splide outside_arrows" role="group">
         <div class="splide__track">
             <ul class="splide__list">
                 @for($i=0; $i<6; $i++)

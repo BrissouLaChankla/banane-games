@@ -1,21 +1,21 @@
 @extends('layouts.app')
 @section('content')
-    <header class="bg-dark header-game">
+    <header class="bg-lighter header-game py-4">
         <div class="container">
             <nav aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="/">Accueil</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">{{ $game->title }}</li>
+                <ol class="breadcrumb align-items-center">
+                    <span class="breadcrumb-item"><a class="font-base text-capitalize text-dark" href="/">Accueil</a></span>
+                    <span class="breadcrumb-item active text-primary" aria-current="page">{{ $game->title }}</span>
                 </ol>
             </nav>
-            <h1>
+            <h1 class="mb-4 mt-8">
                 {{ $game->title }}
             </h1>
-            <i>Jeu de {{ $game->matiere }}</i> <span class="mx-2">|</span> @include('sections.game-status')
+            <h2 class="theme h5 font-base d-inline-block text-muted">Jeu de {{ $game->matiere }}</h2> <span class="mx-4">|</span> @include('sections.game-status')
         </div>
     </header>
 
-    <div class="container pt-7 pb-10 carousel-game">
+    <div class="container pt-7 carousel-game">
         <div class="row">
             <div class="col-lg-6">
                 <div id="main-slider" class="splide">
@@ -54,9 +54,16 @@
         </div>
     </div>
 
+    <div class="container mt-10">
+        <h2>
+            <x-underlined word="Classement" />
+        </h2>
+        <p class="p-big py-4">Nanaba est une application qui allie gestion du temps d’écran et éducation.</p>
+        @include('sections.ranking')
+    </div>
+
     <div id="others">
         <div class="container mt-10">
-          
             @include('sections.games', ['mainTitle' => 'Découvrez nos autres jeux', 'games' => $others])
         </div>
     </div>
