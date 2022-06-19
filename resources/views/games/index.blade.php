@@ -15,7 +15,7 @@
         </div>
     </header>
 
-    <div class="container pt-5">
+    <div class="container pt-7 pb-10 carousel-game">
         <div class="row">
             <div class="col-lg-6">
                 <div id="main-slider" class="splide">
@@ -55,11 +55,9 @@
     </div>
 
     <div id="others">
-        <div class="container p-xl-5">
-            <div class="text-center mb-4">
-                <h2>Découvrez nos autres jeux</h2>
-            </div>
-            @include('sections.games', ['games' => $others, 'small_card' => true])
+        <div class="container mt-10">
+          
+            @include('sections.games', ['mainTitle' => 'Découvrez nos autres jeux', 'games' => $others])
         </div>
     </div>
 @endsection

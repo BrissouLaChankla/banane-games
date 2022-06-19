@@ -2,7 +2,7 @@
 //     --main-color-dark: #ff6209;
 //     --main-color: #fd6c12;
 //     --main-color-light: #ffa36f;
-//     --main-color-lighter: #fee8db;
+    //     --main-color-lighter: #fee8db;
 //     --red:red;
 //     --green:green;
 // }
@@ -16,6 +16,20 @@
     --secondary: #ffd800;
     --red:red;
     --green:green;
+    --gray-light:#fafafa;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+
+.fit-content {
+    width: fit-content;
+}
+
+.r-m-45 {
+    transform: rotate(-45deg);
 }
 
 
@@ -37,26 +51,16 @@ h4,
 h5,
 h6 {
     font-family: $fredoka-font-family;
+    margin: 0;
 }
-h1,.h1-font-size {
-    // 42px
-    font-size:2.625rem;
-}
-h2,.h2-font-size {
-    // 32px
-    font-size:2rem;
-}
-h3,.h3-font-size {
-    // 24px
-    font-size:1.5rem;
-}
-a,button,.btn {
+
+a,button,.btn, p {
     // 18px
     font-size:1.125rem;
 }
-p {
-    // 16px
-    font-size:1rem;
+
+p{
+    margin-bottom: 0;
 }
 
 .card-title {
@@ -71,9 +75,24 @@ p {
     line-height: 1.75;
     letter-spacing: 0.64px;
 }
+
+.card p {
+    font-size:1rem;
+}
+
 .mw-300{
     max-width: 300px;
 }
+
+p{
+    color:$text-muted;
+}
+
+.p-big {
+    line-height: $line-height-big;
+    font-size: $p-font-size-big;
+}
+
 .spacer {
     display: block;
     &-96 {
@@ -93,15 +112,18 @@ p {
     }
 }
 
+.bg-muted {
+    background-color: $text-muted;
+}
 
+body {
+    letter-spacing: .8px;
+}
 
 a{
     text-decoration: none;
 }
 
-p {
-    font-size: 1rem;
-}
 
 .font-title {
   font-family: $fredoka-font-family;
@@ -134,10 +156,7 @@ p {
 }
 
 
-.splide__slide{
-    width: 1300px;
-    height: 364px;
-}
+
 
 
 

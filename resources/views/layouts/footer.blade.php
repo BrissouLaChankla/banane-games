@@ -1,12 +1,10 @@
 <footer id="footer" class="py-5 bg-primary text-white  text-lg-start">
     <div class="container-lg px-5 px-lg-0">
         <span class="nanagames text-secondary font-title">Nanagames</span>
-        <div class="spacer-56 d-none d-lg-block"></div>
-        <div class="spacer-24 d-block d-lg-none"></div>
-        <div class="row">
+        <div class="row mt-3 mt-lg-8">
             <div class="col-lg-3">
                 <div class="mb-4">
-                    <h3 class="mb-lg-4">Découvrez-nous</h3>
+                    <h3 class="mb-lg-5 h4">Découvrez-nous</h3>
                     <div class="d-flex flex-column align-items-start">
                         <a href="#">Nanaba</a>
                     </div>
@@ -15,7 +13,7 @@
 
             <div class="col-lg-3">
                 <div class="mb-4">
-                    <h3 class="mb-lg-4">Contact</h3>
+                    <h3 class="mb-lg-5 h4">Contact</h3>
                     <div class="d-flex flex-column align-items-start">
                         <a href="#">Nous contacter</a>
                         <a href="#">Nous rejoindre</a>
@@ -25,7 +23,7 @@
 
             <div class="col-lg-3">
                 <div class="mb-4">
-                    <h3 class="mb-lg-4">Suivez nous</h3>
+                    <h3 class="mb-lg-5 h4">Suivez nous</h3>
                     <div class="text-nowrap">
                         <a href="https://www.facebook.com/nanabaofficiel/" class="me-4 me-lg-3"><img
                                 src="{{ asset('img/footer/akar-icons-facebook-fill.svg') }}" alt="Icon facebook"></a>
@@ -44,7 +42,7 @@
             <div class="col-lg-3">
                 <div class="mb-4">
 
-                <h3 class="mb-lg-4">S’inscrire à la newsletter</h3>
+                <h3 class="mb-lg-5 h4">S’inscrire à la newsletter</h3>
                     {!! Form::open(['url' => route('add-email-newsletter'), 'class' => 'd-flex']) !!}
                     <div class="flex-grow-1 mw-300">
                         {{ Form::email('email', null, ['class' => 'form-control text-muted h-100 border-0 ', 'placeholder' => 'Votre email', 'required']) }}
@@ -72,10 +70,7 @@
 
         </div>
 
-        <div class="spacer-48 d-none d-lg-block"></div>
-        <div class="spacer-24 d-block d-lg-none"></div>
-
-        <div class="d-flex flex-column flex-lg-row justify-content-center">
+        <div class="d-flex flex-column flex-lg-row justify-content-center mt-4 mt-lg-7">
             <a href="#" class="mb-3 mb-lg-0 mx-lg-3 fw-bold">Mentions légales</a>
             <a href="#" class="mb-3 mb-lg-0 mx-lg-3 fw-bold">Chartes des cookies</a>
             <a href="#" class="mb-3 mb-lg-0 mx-lg-3 fw-bold">CGV / CGU</a>

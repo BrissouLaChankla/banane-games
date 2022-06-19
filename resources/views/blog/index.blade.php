@@ -1,32 +1,31 @@
 @extends('layouts.app')
 @section('content')
     <div class="container">
-        <div class="spacer-96"></div>
 
-        <h1 class="text-center mb-3 text-primary section-title-blog">A la une</h1>
+        <h1 class="text-center text-primary section-title-blog mt-10">À la une</h1>
 
         <section class="row">
             @for ($i = 0; $i < 2; $i++)
-                <div class="col-md-6">
+                <div class="col-md-6 mt-4 mt-md-6">
                     <x-article-card></x-article-card>
                 </div>
             @endfor
         </section>
-        <div class="spacer-96"></div>
-        <h1 class="text-center mb-3 text-primary section-title-blog">Les derniers articles</h1>
+        <h1 class="text-center text-primary section-title-blog mt-10">Les derniers articles</h1>
        
             <section class="row">
                 @for ($i = 0; $i < 6; $i++)
-                    <div class="col-md-6 col-lg-4">
+               
+                    <div class="col-md-6 col-lg-4 mt-4 mt-md-6">
                         <x-article-card></x-article-card>
                     </div>
+                  
                 @endfor
             </section>
-            <div class="spacer-48"></div>
-                <div class="text-center">
-                    <div class="btn btn-primary">Chargez plus</div>
+
+                <div class="text-center mt-6 mb-9">
+                    <button class="btn btn-primary mx-auto">Chargez plus</button>
                 </div>
-            <div class="spacer-96"></div>
 
    
     </div>

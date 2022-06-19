@@ -3,11 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Member;
 
 class AboutController extends Controller
 {
     //
     public function showAbout() {
-        return view('about.index');
+        $members = Member::all();
+        return view('about.index')->with([
+            'members' => $members
+        ]);
     }
 }
