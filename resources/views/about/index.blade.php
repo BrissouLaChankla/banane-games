@@ -8,7 +8,7 @@
                 <img src="{{ asset('img/mister-nanaba/mister-nanaba-heureux.webp') }}" class="d-none d-lg-block nanaba-top-left"
                     alt="Mister Nanaba Heureux">
                     <div class="position-relative">
-                        <img src="{{ asset('img/OlivierGuerin_ALMonier.webp') }}" class="img-fluid"
+                        <img src="{{ asset('img/Nanagames_OlivierGuerin_ALMonier.webp') }}" style="max-height: 404px;" class="fit-cover w-100"
                         alt="Olivier Guerin et Anne Laure Monier">
                         <img src="{{ asset('img/decorations/zigzag-bottom-left.webp') }}" class="zigzag-bottom-left d-none d-lg-block"
                         alt="Decoration zig zag">
@@ -31,7 +31,7 @@
                     <div class="text-nowrap ">
                         <h2 class="d-inline-block">Tout savoir <br>sur l'application</h2>
                         <span class="h2 position-relative ms-1">Nanaba
-                            <img class="right-corner-pop"  src="{{ asset('img/decorations/right-corner-pop.webp') }}"
+                            <img class="right-corner-pop" loading="lazy" src="{{ asset('img/decorations/right-corner-pop.webp') }}"
                                 alt="">
                         </span>
                     </div>
@@ -40,7 +40,7 @@
                 </div>
                 <div>
                     <div class="text-center design-img mt-7 p-10">
-                        <img src="{{ asset('img/designs/sac-a-dos.webp') }}" class="img-fluid"
+                        <img src="{{ asset('img/designs/sac-a-dos.webp') }}" loading="lazy" class="img-fluid"
                             alt="Nanagames | Sac à Dos ">
                     </div>
                     <h3 class="mb-3 mt-4">Soutien scolaire</h3>
@@ -50,7 +50,7 @@
             </div>
             <div class="col-lg-6">
                 <div class="text-center design-img p-10 mt-10">
-                    <img src="{{ asset('img/designs/blocage.webp') }}" class="img-fluid"
+                    <img src="{{ asset('img/designs/blocage.webp') }}" loading="lazy" class="img-fluid"
                         alt="Nanagames | Blocage">
                 </div>
                 <h3 class="mb-3 mt-4">Contrôle parental</h3>
@@ -59,7 +59,7 @@
             </div>
             <div class="col-lg-6">
                 <div class="text-center design-img p-10 mt-10">
-                    <img src="{{ asset('img/designs/langues.webp') }}" class="img-fluid"
+                    <img src="{{ asset('img/designs/langues.webp') }}" loading="lazy" class="img-fluid"
                         alt="Nanagames | Langues">
                 </div>
                 <h3 class="mb-3 mt-4">Intelligence artificielle</h3>
@@ -78,19 +78,21 @@
             </div>
         </div>
         <div class="text-center position-relative mt-7">
-            <img src="{{ asset('img/decorations/arrow-bottom-right.webp') }}"
+            <img src="{{ asset('img/decorations/arrow-bottom-right.webp')}}" loading="lazy"
                 class="d-none d-lg-inline-block arrow-bottom-right" alt="">
             <x-button name="En savoir plus !" color="primary" />
         </div>
         <h2 class="text-center text-primary mt-10 mb-7">À propos de Nanagames</h2>
         <div class="row">
             <div class="col-lg-6 bg-boss position-relative">
-                <img src="{{ asset('img/OlivierGuerin_ALMonier.webp') }}" class="img-fluid" alt="">
+                <img src="{{ asset('img/Nanagames_TeamTech.webp') }}" loading="lazy" style="max-height: 404px;" class="fit-cover w-100" alt="">
             </div>
             <div class="col-lg-6">
                 <div class="ps-lg-5 ">
-                    <span class="position-relative">
-                        <h2 class="mb-4 mt-7 mt-lg-0">Une équipe jeune et dynamique</h2>
+                        <span class="position-relative">
+                            <h3 class="d-inline-block mb-4 mt-7 mt-lg-0">Une équipe jeune et dynamique</h3>
+                            <img src="{{asset('img/decorations/top-left-swoosh.webp')}}" class="top-left-swoosh d-none d-xl-block" alt="">
+                        </span>
                         <p class="p-big">Nanaba est une startup de edtech niçoise à impact. Fondée en janvier 2021
                             par Anne Laure MONIER, une maman soucieuse de l’activité numérique de ses enfants et Olivier
                             Guerin, Nanaba est engagée pour optimiser le temps d’écran et régler la problématique à la
@@ -107,8 +109,8 @@
                 </p>
             </div>
             <div id="team" class="mt-7 position-relative">
-                <img class="right-corner-pop d-none d-lg-block" src="{{ asset('img/decorations/right-corner-pop.webp') }}" alt="">
-                <img src="{{ asset('img/decorations/zigzag-bottom-left.webp') }}" class="zigzag-bottom-left d-none d-lg-block"
+                <img class="right-corner-pop d-none d-lg-block" loading="lazy" src="{{ asset('img/decorations/right-corner-pop.webp') }}" alt="">
+                <img src="{{ asset('img/decorations/zigzag-bottom-left.webp') }}" loading="lazy" class="zigzag-bottom-left d-none d-lg-block"
                     alt="Decoration zig zag">
                 @include('sections.teamcarousel')
             </div>
@@ -120,7 +122,7 @@
                     <p class="p-big mt-4">
                         Nanaba est une application qui allie gestion du temps d’écran et éducation.
                     </p>
-                    <img src="{{ asset('img/mister-nanaba/mister-nanaba-laptop.webp') }}" alt=""
+                    <img src="{{ asset('img/mister-nanaba/mister-nanaba-laptop.webp') }}" loading="lazy" alt=""
                         class="mister-nanaba-laptop img-fluid mt-7 pb-6">
                 </div>
                 <div class="col-lg-6 position-relative">

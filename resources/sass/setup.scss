@@ -28,6 +28,10 @@
     width: fit-content;
 }
 
+.fit-cover {
+    object-fit: cover;
+}
+
 .r-m-45 {
     transform: rotate(-45deg);
 }

@@ -23,7 +23,7 @@
                 @endfor
             </section>
 
-                <div class="text-center mt-6 mb-9">
+                <div class="text-center mt-6">
                     <button class="btn btn-primary mx-auto">Chargez plus</button>
                 </div>
 

@@ -55,14 +55,14 @@ Route::prefix('admin')->middleware('auth')->group(function () {
 
 Route::controller(BlogController::class)->prefix('actualites')->group(function () {
     Route::get('/', 'showBlog')->name('show-blog');
-    Route::get('/{slug}', 'showArticle')->name('show-article');
+    // Route::get('/{slug}', 'showArticle')->name('show-article');
+    Route::get('/article', 'showArticle')->name('show-article');
 });
 
 Route::post('/add-email-newsletter', [NewsletterController::class, 'AddEmailNewsletter'])->name('add-email-newsletter');
 
 Route::get('/a-propos', [AboutController::class, 'showAbout'])->name('show-about');
 
-Route::get('/article', [ArticleController::class, 'showArticle'])->name('show-article');
 
 
 Route::get('/contact', [ContactController::class, 'showContact'])->name('show-contact');

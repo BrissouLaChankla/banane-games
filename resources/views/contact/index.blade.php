@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-    <div id="contact" class="d-flex align-items-center py-10">
+    <div id="contact" class="d-flex align-items-center pt-10">
         <div class="container">
             <h1 class="text-primary text-center">Nous contacter</h1>
             <p class="mt-5 text-center">Des questions ? Un problème ? nous serons ravis de vous répondre</p>
