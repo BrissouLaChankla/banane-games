@@ -32,19 +32,25 @@ Route::controller(GameController::class)->prefix('jeux')->group(function () {
     Route::get('/{slug}', 'showGame')->name('show-game');
 });
 
+// ADMIN
 Route::prefix('admin')->middleware('auth')->group(function () {
 
     Route::controller(DashboardController::class)->group(function() {
         Route::get('/', 'showDashboard')->name('show-dashboard-admin');
     });
 
+    // ARTICLES
+    Route::prefix('articles')->controller(BlogController::class)->group(function() {
+        Route::get('/create', 'showCreate')->name('show-create-article');
+        Route::post('/create', 'postCreateArticle')->name('post-create-article');
+    });
 
     Route::prefix('modules')->group(function() {
+        
+        // WORDS
         Route::prefix('words')->controller(WordController::class)->group(function() {
-
             Route::get('/', 'showWords')->name('show-modules-words');
             Route::post('/edit-word', 'editWords')->name('edit-modules-words');
-
         });
     });
 
@@ -55,14 +61,13 @@ Route::prefix('admin')->middleware('auth')->group(function () {
 
 Route::controller(BlogController::class)->prefix('actualites')->group(function () {
     Route::get('/', 'showBlog')->name('show-blog');
-    Route::get('/{slug}', 'showArticle')->name('show-article');
+    Route::get('{slug}', 'showArticle')->name('show-article');
 });
 
 Route::post('/add-email-newsletter', [NewsletterController::class, 'AddEmailNewsletter'])->name('add-email-newsletter');
 
 Route::get('/a-propos', [AboutController::class, 'showAbout'])->name('show-about');
 
-Route::get('/article', [ArticleController::class, 'showArticle'])->name('show-article');
 
 
 Route::get('/contact', [ContactController::class, 'showContact'])->name('show-contact');

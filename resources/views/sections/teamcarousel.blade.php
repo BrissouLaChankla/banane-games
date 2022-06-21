@@ -3,7 +3,7 @@
           <ul class="splide__list">
             @foreach($members as $member)
                 <div class="splide__slide text-center px-3">
-                    <img src="{{$member->img_path}}" alt="" class="img-fluid">
+                    <img src="{{asset('img/members/Nanagames_'.$member->img_path.'.webp')}}" alt="" loading="lazy" class="img-fluid">
                     <h3 class="mt-4 mb-2">{{$member->fullname}}</h3>
                     <p>{{$member->job}}</p>
                 </div>
