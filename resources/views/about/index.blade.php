@@ -8,7 +8,7 @@
                 <img src="{{ asset('img/mister-nanaba/mister-nanaba-heureux.webp') }}" class="d-none d-lg-block nanaba-top-left"
                     alt="Mister Nanaba Heureux">
                     <div class="position-relative">
-                        <img src="{{ asset('img/Nanagames_OlivierGuerin_ALMonier.webp') }}" style="max-height: 404px;" class="fit-cover w-100"
+                        <img src="{{ asset('img/members/Nanagames_OlivierGuerin_ALMonier.webp') }}" style="max-height: 404px;" class="fit-cover w-100"
                         alt="Olivier Guerin et Anne Laure Monier">
                         <img src="{{ asset('img/decorations/zigzag-bottom-left.webp') }}" class="zigzag-bottom-left d-none d-lg-block"
                         alt="Decoration zig zag">
@@ -85,7 +85,7 @@
         <h2 class="text-center text-primary mt-10 mb-7">À propos de Nanagames</h2>
         <div class="row">
             <div class="col-lg-6 bg-boss position-relative">
-                <img src="{{ asset('img/Nanagames_TeamTech.webp') }}" loading="lazy" style="max-height: 404px;" class="fit-cover w-100" alt="">
+                <img src="{{ asset('img/members/Nanagames_TeamTech.webp') }}" loading="lazy" style="max-height: 404px;" class="fit-cover w-100" alt="">
             </div>
             <div class="col-lg-6">
                 <div class="ps-lg-5 ">

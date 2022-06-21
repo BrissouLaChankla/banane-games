@@ -11,9 +11,11 @@ class ArticleCard extends Component
      *
      * @return void
      */
-    public function __construct()
+    public $article;
+
+    public function __construct($article)
     {
-        //
+        $this->article = $article;
     }
 
     /**

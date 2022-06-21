@@ -22,7 +22,6 @@ class WordController extends Controller
     public function getRandomWord() {
         $word = Word::inRandomOrder()->first()->name;
         return response()->json($word);
-
     }
 
     public function getDailyWord() {

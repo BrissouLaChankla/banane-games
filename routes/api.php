@@ -19,7 +19,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 
-Route::apiResource("words", WordController::class);
+// Route::apiResource("words", WordController::class);
 
 
 Route::controller(WordController::class)->prefix('get')->group(function () {

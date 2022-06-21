@@ -13,7 +13,6 @@
                         </strong>
                         est une plateforme de jeux ludo-éducatifs gratuits pour s'améliorer à l'école. Elle est fait pour ceux qui veulent apprendre tout en s'amusant.
                         <br>
-                        {{-- Ici tu trouveras des jeux et des quiz réalisés pensés pour les petits comme les grands ! --}}
                     </p>
                     <div class="d-inline-block position-relative">
                         <a href="{{ URL::to('/') }}#games">
@@ -39,7 +38,7 @@
 
  
       
-            @include('sections.lastarticles')
+    @include('sections.lastarticles')
 
     
  
