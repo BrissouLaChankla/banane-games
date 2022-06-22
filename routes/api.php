@@ -26,3 +26,8 @@ Route::controller(WordController::class)->prefix('get')->group(function () {
     Route::get('/randomword', 'getRandomWord');
     Route::get('/dailyword', 'getDailyWord');
 });
+
+Route::controller(WordController::class)->prefix('post')->group(function () {
+    Route::post('/changedailyword', 'changeDailyWord');
+});
+
