@@ -25,8 +25,18 @@ class WordController extends Controller
     }
 
     public function getDailyWord() {
-        $word = Word::inRandomOrder()->first()->name;
+        $word = Word::where('is_daily_word', '=', 1)->first()->name;
         return response()->json($word);
+    }
+
+    public function changeDailyWord(){
+        // Remove all daily word
+        $dailyword = Word::where('is_daily_word', '=', 1)->first();
+        $dailyword->update(['is_daily_word' => 0]);
+
+        // Setup new daily word
+        $newdailyword = Word::inRandomOrder()->first();
+        $newdailyword->update(['is_daily_word' => 1]);
     }
 
     /**
