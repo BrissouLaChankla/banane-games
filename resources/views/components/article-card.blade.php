@@ -13,7 +13,7 @@
         </h1>
 
         <p class="card-text my-4">
-            {!! nl2br($article->content) !!}
+            {!! nl2br($article->description) !!}
 
         </p>
 
