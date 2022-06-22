@@ -9,8 +9,8 @@
           </nav>
    
         <div class="text-center">
-            <img src={{$article->header_img_url}}
-                class="img-article img-fluid" alt="">
+            <img src={{asset($article->header_img_url)}}
+                class="img-article img-fluid fit-cover"  alt="">
         </div>
 
         <div class="d-flex fw-bold justify-content-between align-items-center mt-8">

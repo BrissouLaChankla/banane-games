@@ -5,7 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Article;
 use Illuminate\Support\Str;
+use Intervention\Image\Facades\Image;
  
+
 class BlogController extends Controller
 {
 
@@ -33,14 +35,22 @@ class BlogController extends Controller
     public function postCreateArticle(Request $request) {
         
         
-        $nameImg = "ImageArticle-".Str::slug($request->title, '-').".webp";
-        $destinationPath = public_path('img/articles/'.$namefile);
-        $destinationPath = public_path('img/articles/small/'.$namefile);
+        $nameImg = "Image_Article-".Str::slug($request->title, '-').".webp";
+        $destinationPath = public_path('img/articles/'.$nameImg);
+        $destinationPathThumbnail = public_path('img/articles/thumbnail/'.$nameImg);
 
-        dd($altImg);
+        // = Create the Image Object
+        $image = Image::make($request->file('img_article'));
+    
+        // Crop and save 
+        $image->resize(800, null, function ($constraint) {
+            $constraint->aspectRatio();
+        })->encode('webp', 100)->save($destinationPath)->save($destinationPathThumbnail);
 
-
+        $request->merge(["thumbnail_img_url" => 'img/articles/thumbnail/'.$nameImg]);
+        $request->merge(["header_img_url" => 'img/articles/'.$nameImg]);
         $request->merge(['slug' => Str::slug($request->title, '-')]);
+
         $article = Article::create($request->all());
         return back();
     }

@@ -6,8 +6,8 @@
                 @foreach(\App\Models\Article::latest()->take(6)->get() as $article)
                     <li class="splide__slide">
                         <article class="card rounded border-0 shadow carousel-card">
-                            <img src="https://static.skillshare.com/cdn-cgi/image/quality=85,width=1242,height=700,format=auto/uploads/project/74915/cover_1242_da42e6ea20291d2dbdaee473756cf2d5.png"
-                                class="card-img-top object-fit" alt="" style="height:200px ;">
+                            <img src="{{asset($article->thumbnail_img_url)}}"
+                                class="card-img-top object-fit" loading="lazy" alt="" style="height:200px ;">
                             <div class="p-4">
                                 @isset($article->updated_at)
                                     <div class="d-flex fw-bold justify-content-star">
@@ -19,12 +19,12 @@
                                     {{$article->title}}
                                 </h1>
                                 <p class="card-text my-4">
-                                    {!! nl2br($article->content) !!}
+                                    {!! $article->description !!}
                                 </p>
 
                                 <a href="{{ route('show-article', ['slug' => $article->slug]) }}"
                                     class="text-primary fw-bold text-decoration-underline ">
-                                    Lire la suite
+                                    Lire l'article
                                 </a>
                             </div>
                         </article>

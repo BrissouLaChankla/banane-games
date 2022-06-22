@@ -16,6 +16,7 @@ class Word extends Model
         'difficulty_id',
         'theme_id',
         'game_id',
+        'is_daily_word'
     ];
 
     public function theme() {
