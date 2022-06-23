@@ -11,6 +11,8 @@ use App\Http\Controllers\NewsletterController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\WordController;
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\MentionsController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -72,6 +74,13 @@ Route::controller(BlogController::class)->prefix('actualites')->group(function (
 Route::post('/add-email-newsletter', [NewsletterController::class, 'AddEmailNewsletter'])->name('add-email-newsletter');
 
 Route::get('/a-propos', [AboutController::class, 'showAbout'])->name('show-about');
+
+
+// MENTIONS G
+
+Route::get('/mentions-legales', [MentionsController::class, 'showMentions'])->name('show-mentions');
+Route::get('/chartes-des-cookies', [MentionsController::class, 'showChartes'])->name('show-chartes');
+Route::get('/cvg-cvu', [MentionsController::class, 'showCvgCvu'])->name('show-cvgcvu');
 
 
 
