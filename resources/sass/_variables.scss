@@ -25,3 +25,22 @@ $border-radius:10px;
 $box-shadow: 4px 4px 10px 0 rgba(122, 122, 122, 0.1), -4px -4px 100px 2px rgba(122, 122, 122, 0.1), -4px 0 10px 0 rgba(0, 0, 0, 0.1);
 
 
+$spacer: 1rem !default;
+$spacers: () !default;
+$spacers: map-merge(
+  (
+    0: 0,                 // 0px
+    1: $spacer * .5,     // 8px
+    2: $spacer,          // 16px
+    3: $spacer * 1.125,  // 18px
+    4: $spacer * 1.5,    // 24px
+    5: $spacer * 2,      // 32px
+    6: $spacer * 2.75,   // 44px
+    7: $spacer * 3,      // 48px
+    8: $spacer * 3.5,    // 56px
+    9: $spacer * 4.5,    // 72px 
+    10: $spacer * 6,     // 96px
+    11: $spacer * 12,    // 192px
+  ),
+  $spacers
+);
