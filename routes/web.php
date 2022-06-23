@@ -42,7 +42,12 @@ Route::prefix('admin')->middleware('auth')->group(function () {
     // ARTICLES
     Route::prefix('articles')->controller(BlogController::class)->group(function() {
         Route::get('/create', 'showCreate')->name('show-create-article');
+        Route::get('/edit/{slug}', 'showEdit')->name('show-edit-article');
+        Route::get('/all', 'showAll')->name('show-all-articles');
+
         Route::post('/create', 'postCreateArticle')->name('post-create-article');
+
+        Route::delete('/delete/{id}', 'deleteArticle')->name('delete-article');
     });
 
     Route::prefix('modules')->group(function() {

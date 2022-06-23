@@ -3,7 +3,7 @@
     <div class="splide outside_arrows" role="group">
         <div class="splide__track">
             <ul class="splide__list">
-                @foreach(\App\Models\Article::latest()->take(6)->get() as $article)
+                @foreach(\App\Models\Article::where('is_published', '=', 1)->latest()->take(6)->get() as $article)
                     <li class="splide__slide">
                         <article class="card rounded border-0 shadow carousel-card">
                             <img src="{{asset($article->thumbnail_img_url)}}"

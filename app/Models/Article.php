@@ -15,6 +15,7 @@ class Article extends Model
         'title',
         'description',
         'slug',
+        'is_published',
         'content',
         'thumbnail_img_url',
         'header_img_url'

@@ -1,5 +1,5 @@
 <article class="card rounded border-0 shadow">
-    <img src="https://static.skillshare.com/cdn-cgi/image/quality=85,width=1242,height=700,format=auto/uploads/project/74915/cover_1242_da42e6ea20291d2dbdaee473756cf2d5.png" class="card-img-top object-fit" alt="" style="height:200px ;">
+    <img src="{{asset($article->header_img_url)}}" class="card-img-top object-fit" alt="" style="height:200px ;">
 
     <div class="p-4">
         @isset($article->updated_at)

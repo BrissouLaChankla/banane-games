@@ -20,7 +20,7 @@ class NewsletterController extends Controller
         } else {
             // Only happening when there is a new subscriber
             $newsletter = Newsletter::create($request->all());
-            return  redirect(url()->previous().'#footer')->with('newsletter-success', 'Vous êtes bien enregistré dans notre Newsletter. Bienvenue !');
+            return  redirect(url()->previous().'#footer')->with('newsletter-success', 'Vous êtes bien enregistré dans notre Newsletter. Bienvenue ! 🎉');
         }
     }
 }

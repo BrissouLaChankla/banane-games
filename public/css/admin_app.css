@@ -1,0 +1,179 @@
+@import url(https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@400;700&display=swap);
+:root {
+  --main-color-dark: #B15301;
+  --main-color: #fd7f12;
+  --main-color-light: #FD9A44;
+  --main-color-lighter: #FFF7F0;
+  --secondary: #ffd800;
+  --red:red;
+  --green:green;
+  --gray-light:#fafafa;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.fit-content {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.fit-cover {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.r-m-45 {
+  transform: rotate(-45deg);
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+#app main {
+  flex: 1;
+  margin-top: 85px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Fredoka One", cursive;
+  margin: 0;
+}
+
+a, button, .btn, p {
+  font-size: 1.125rem;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+.card-title {
+  font-family: "Poppins", sans-serif !important;
+  font-weight: 700;
+  font-size: 1.125rem;
+  line-height: 24px;
+  letter-spacing: 0.72px;
+}
+
+.card-text {
+  line-height: 1.75;
+  letter-spacing: 0.64px;
+}
+
+.card p {
+  font-size: 1rem;
+}
+
+.mw-300 {
+  max-width: 300px;
+}
+
+p {
+  color: #7a7a7a;
+}
+
+.p-big {
+  line-height: 2.5rem;
+  font-size: 1.25rem;
+}
+
+.spacer {
+  display: block;
+}
+.spacer-96 {
+  height: 96px;
+}
+.spacer-72 {
+  height: 72px;
+}
+.spacer-56 {
+  height: 56px;
+}
+.spacer-48 {
+  height: 48px;
+}
+.spacer-24 {
+  height: 24px;
+}
+
+.bg-muted {
+  background-color: #7a7a7a;
+}
+
+body {
+  letter-spacing: 0.8px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.font-title {
+  font-family: "Fredoka One", cursive;
+}
+
+.font-base {
+  font-family: "Poppins", sans-serif;
+}
+
+.black_white {
+  filter: grayscale(1);
+}
+
+.form-control {
+  border-radius: 12px;
+}
+.form-control::-moz-placeholder {
+  opacity: 0.5;
+}
+.form-control:-ms-input-placeholder {
+  opacity: 0.5;
+}
+.form-control::placeholder {
+  opacity: 0.5;
+}
+
+.object-fit {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.img-article {
+  width: 606px;
+  height: 386px;
+}
+
+.video-article {
+  width: 800px;
+  height: 400px;
+}
+
+.outside_arrows .splide__arrow--prev {
+  left: -2.5em;
+}
+.outside_arrows .splide__arrow--next {
+  right: -2.5em;
+}
+@media all and (max-width: 768px) {
+  .outside_arrows .splide__arrows {
+    display: none;
+  }
+}
+
+.splide__pagination__page {
+  background-color: #fd7f12 !important;
+}
+
+.splide__arrow svg {
+  fill: #fd7f12 !important;
+}
