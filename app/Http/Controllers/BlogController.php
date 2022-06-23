@@ -48,7 +48,7 @@ class BlogController extends Controller
     }
 
 
-    public function postCreateArticle(Request $request) {
+    public function postEditCreateArticle(Request $request) {
 
 
             $validator = Validator::make($request->all(), [
@@ -62,15 +62,17 @@ class BlogController extends Controller
                 return redirect(url()->previous())->withErrors($validator)->withInput();
             } else {
 
+            // génère le slug
             $request->merge(['slug' => Str::slug($request->title, '-')]);
 
-            
+            // Détect l'état du switch
             if($request->is_published) {
                 $request->merge(['is_published' => 1]);
             } else {
                 $request->merge(['is_published' => 0]);
             }
             
+            // Détect si une image a été upload 
             if($request->hasFile('img_article')){
                 $nameImg = "Image_Article-".Str::slug($request->title, '-').".webp";
                 $destinationPath = public_path('img/articles/'.$nameImg);

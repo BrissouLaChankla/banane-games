@@ -1,6 +1,6 @@
 @include('sections.handle-errors')
     
-{!! Form::open(['url' => route('post-create-article'), 'files' => true]) !!}
+{!! Form::open(['url' => route('post-edit-create-article'), 'files' => true]) !!}
 
 <div class="row mb-3">
     <div class="col-md-8">

@@ -26,7 +26,8 @@
 }
 
 .r-m-45 {
-  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 
 #app {
@@ -127,16 +128,23 @@ a {
 }
 
 .black_white {
-  filter: grayscale(1);
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
 }
 
 .form-control {
   border-radius: 12px;
 }
+.form-control::-webkit-input-placeholder {
+  opacity: 0.5;
+}
 .form-control::-moz-placeholder {
   opacity: 0.5;
 }
 .form-control:-ms-input-placeholder {
+  opacity: 0.5;
+}
+.form-control::-ms-input-placeholder {
   opacity: 0.5;
 }
 .form-control::placeholder {

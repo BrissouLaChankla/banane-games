@@ -47,9 +47,21 @@ Route::prefix('admin')->middleware('auth')->group(function () {
         Route::get('/edit/{slug}', 'showEdit')->name('show-edit-article');
         Route::get('/all', 'showAll')->name('show-all-articles');
 
-        Route::post('/create', 'postCreateArticle')->name('post-create-article');
+        Route::post('/create', 'postEditCreateArticle')->name('post-edit-create-article');
 
         Route::delete('/delete/{id}', 'deleteArticle')->name('delete-article');
+    });
+
+    
+    // GAMES 
+    Route::prefix('games')->controller(GameController::class)->group(function() {
+        Route::get('/create', 'showCreate')->name('show-create-game');
+        Route::get('/edit/{slug}', 'showEdit')->name('show-edit-game');
+        Route::get('/all', 'showAll')->name('show-all-games');
+
+        Route::post('/create', 'postEditCreateGame')->name('post-edit-create-game');
+
+        Route::delete('/delete/{id}', 'deleteGame')->name('delete-game');
     });
 
     Route::prefix('modules')->group(function() {
