@@ -23,7 +23,7 @@
                         <ul class="splide__list">
                             @foreach ($game->pictures as $picture)
                                 <li class="splide__slide">
-                                    <img src="{{ asset('img/games/screens/' . $picture->img_url) }}" alt="">
+                                    <img src="{{ asset($picture->img_url) }}" alt="">
                                 </li>
                             @endforeach
                         </ul>
@@ -32,7 +32,7 @@
                 <ul id="thumbnails" class="thumbnails">
                     @foreach ($game->pictures as $picture)
                         <li class="thumbnail">
-                            <img src="{{ asset('img/games/screens/' . $picture->img_url) }}" alt="">
+                            <img src="{{ asset( $picture->img_url) }}" alt="">
                         </li>
                     @endforeach
                 </ul>
@@ -41,12 +41,12 @@
                 <div class="ps-3 m-auto right-game-desc">
                     <h2 class="text-center">Quel est le principe du jeu ?</h2>
                     <p class="my-4">
-                        {!! nl2br(e($game->description)) !!}
+                        {!! nl2br($game->description) !!}
                     </p>
                     <div class="text-center mb-5 mb-lg-0">
                         <a @if ($game->is_available) href="{{ $game->link }}" @else class="black_white" @endif
                             target="_blank">
-                            <x-button name="Jouer à {!! $game->title !!}" class="mt-2" color="primary" />
+                            <x-button name="Jouer !" class="mt-2" color="primary" />
                         </a>
                     </div>
                 </div>
