@@ -84,6 +84,19 @@
                     </a>
                 </li>
 
+                @auth 
+
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('show-dashboard-admin') }}">
+                        <img src="{{ asset('img/navbar/dash.webp') }}" class="me-1"
+                                alt="Icone section Dashboard">
+                        Dashboard 
+                    </a>
+                </li>
+                
+                @endauth
+
+
            
             </ul>
         </div>
