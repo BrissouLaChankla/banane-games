@@ -12,6 +12,7 @@ use App\Http\Controllers\AboutController;
 use App\Http\Controllers\WordController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\MentionsController;
+use App\Http\Controllers\Auth\LogoutController;
 
 
 /*
@@ -36,6 +37,9 @@ Route::controller(GameController::class)->prefix('jeux')->group(function () {
 
 // ADMIN
 Route::prefix('admin')->middleware('auth')->group(function () {
+
+
+   
 
     Route::controller(DashboardController::class)->group(function() {
         Route::get('/', 'showDashboard')->name('show-dashboard-admin');
