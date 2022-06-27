@@ -37,6 +37,15 @@ Route::controller(GameController::class)->prefix('jeux')->group(function () {
 // ADMIN
 Route::prefix('admin')->middleware('auth')->group(function () {
 
+
+
+    Route::group(['middleware' => ['auth']], function() {
+        /**
+        * Logout Route
+        */
+        Route::get('/logout', 'LogoutController@perform')->name('logout.perform');
+     });
+
     Route::controller(DashboardController::class)->group(function() {
         Route::get('/', 'showDashboard')->name('show-dashboard-admin');
     });

@@ -13,18 +13,24 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <!-- Left Side Of Navbar -->
             <ul class="navbar-nav me-auto">
- 
+                
+                <li class="nav-item me-2">
+                    <a class="nav-link" href="{{ route('show-dashboard-admin') }}">
+                        Dashboard
+                    </a>
+                </li>
+
             </ul>
 
             <!-- Right Side Of Navbar -->
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
+                <li class="nav-item me-2">
                     <a class="nav-link" href="{{ route('welcome') }}">
-                        Nanagames 
+                        Nanagames Front
                     </a>
                 </li>
             
-                <li class="nav-item dropdown">
+                <li class="nav-item dropdown me-2">
                     <a id="navbarDropdown"
                         class="nav-link dropdown-toggle" role="button"
                         data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -45,7 +51,7 @@
 
                 </li>
 
-                <li class="nav-item dropdown">
+                <li class="nav-item dropdown me-2">
                     <a id="navbarDropdown"
                         class="nav-link dropdown-toggle" role="button"
                         data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -66,7 +72,7 @@
 
                 @auth 
 
-                <li class="nav-item">
+                <li class="nav-item me-2">
                     <a class="nav-link" href="{{ route('welcome') }}">
                         Logout 
                     </a>
