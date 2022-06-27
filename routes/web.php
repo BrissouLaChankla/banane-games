@@ -12,6 +12,7 @@ use App\Http\Controllers\AboutController;
 use App\Http\Controllers\WordController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\MentionsController;
+use App\Http\Controllers\Auth\LogoutController;
 
 
 /*
@@ -38,13 +39,10 @@ Route::controller(GameController::class)->prefix('jeux')->group(function () {
 Route::prefix('admin')->middleware('auth')->group(function () {
 
 
-
-    Route::group(['middleware' => ['auth']], function() {
-        /**
-        * Logout Route
-        */
-        Route::get('/logout', 'LogoutController@perform')->name('logout.perform');
-     });
+    Route::controller(LogoutController::class)->group(function() {
+        Route::get('/logout', 'logoutUser')->name('logout');
+    });
+   
 
     Route::controller(DashboardController::class)->group(function() {
         Route::get('/', 'showDashboard')->name('show-dashboard-admin');

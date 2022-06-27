@@ -73,7 +73,7 @@
                 @auth 
 
                 <li class="nav-item me-2">
-                    <a class="nav-link" href="{{ route('welcome') }}">
+                    <a class="nav-link" href="{{ route('logout') }}">
                         Logout 
                     </a>
                 </li>

@@ -9,18 +9,17 @@ use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
+
 class LogoutController extends Controller
 {
-    /**
-     * Log out account user.
-     *
-     * @return \Illuminate\Routing\Redirector
-     */
-    public function perform()
+
+    public function logoutUser(Request $request)
     {
-        Session::flush();
-        
         Auth::logout();
+ 
+        $request->session()->invalidate();
+     
+        $request->session()->regenerateToken();
 
         return redirect('welcome');
     }
