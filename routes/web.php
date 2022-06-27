@@ -39,9 +39,6 @@ Route::controller(GameController::class)->prefix('jeux')->group(function () {
 Route::prefix('admin')->middleware('auth')->group(function () {
 
 
-    Route::controller(LogoutController::class)->group(function() {
-        Route::get('/logout', 'logoutUser')->name('logout');
-    });
    
 
     Route::controller(DashboardController::class)->group(function() {
