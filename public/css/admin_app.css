@@ -167,7 +167,7 @@ a {
 }
 
 .outside_arrows .splide__arrow--prev {
-  left: -2.5em;
+  left: -2.5em !important;
 }
 .outside_arrows .splide__arrow--next {
   right: -2.5em;
@@ -177,11 +177,11 @@ a {
     display: none;
   }
 }
-
-.splide__pagination__page {
-  background-color: #fd7f12 !important;
-}
-
-.splide__arrow svg {
+.outside_arrows .splide__arrow svg {
   fill: #fd7f12 !important;
+  height: 2em;
+  width: 2em;
+}
+.outside_arrows .splide__arrow {
+  background-color: #ff000000;
 }

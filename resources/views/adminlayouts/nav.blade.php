@@ -2,8 +2,8 @@
 
 <nav class="navbar navbar-expand-lg shadow-sm  py-3">
     <div class="container">
-        <a class="navbar-brand" href="{{ url('/') }}">
-            {{ config('app.name', 'Laravel') }}
+        <a class="navbar-brand"href="{{ route('show-dashboard-admin') }}">
+            Dashboard
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -11,16 +11,6 @@
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <!-- Left Side Of Navbar -->
-            <ul class="navbar-nav me-auto">
-                
-                <li class="nav-item me-2">
-                    <a class="nav-link" href="{{ route('show-dashboard-admin') }}">
-                        Dashboard
-                    </a>
-                </li>
-
-            </ul>
 
             <!-- Right Side Of Navbar -->
             <ul class="navbar-nav ms-auto">
@@ -70,9 +60,9 @@
 
                 </li>
 
-                @auth 
+             
 
-                <li class="nav-item me-2">
+                {{-- <li class="nav-item me-2">
                 <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                     Logout
                 </a>
@@ -81,9 +71,35 @@
                    @csrf
                 </form>
                    
-                </li>
+                </li> --}}
                 
-                @endauth
+              
+
+                <li class="nav-item dropdown me-2">
+                    <a id="navbarDropdown"
+                        class="nav-link dropdown-toggle" role="button"
+                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                   
+                        {{ auth()->user()->name }}
+                    </a>
+
+                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                        
+                            <a href="{{ route('show-all-games') }}" class="dropdown-item">
+                                Logs
+                            </a>
+                            <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                Logout
+                            </a>
+            
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                               @csrf
+                            </form>
+                               
+                    
+                    </div>
+
+                </li>
                 
            
             </ul>
