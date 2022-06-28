@@ -85,7 +85,7 @@
 
                     <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                         
-                            <a href="{{ route('show-all-games') }}" class="dropdown-item">
+                            <a href="/admin/log-reader" class="dropdown-item">
                                 Logs
                             </a>
                             <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
