@@ -32,8 +32,7 @@ class ContactMail extends Mailable
         
         $email = $this->subject('Nanagames | Email de contact 📩')
         ->view('emails.contactMail');
-        
-        if ($this->mailData["attachments"]) {
+        if (isset($this->mailData["attachments"])) {
             $attachments = $this->mailData["attachments"];
 
             foreach($attachments as $attachment) {
