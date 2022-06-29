@@ -60,19 +60,6 @@
 
                 </li>
 
-             
-
-                {{-- <li class="nav-item me-2">
-                <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                    Logout
-                </a>
-
-                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                   @csrf
-                </form>
-                   
-                </li> --}}
-                
               
 
                 <li class="nav-item dropdown me-2">
@@ -87,6 +74,10 @@
                         
                             <a href="/admin/log-reader" class="dropdown-item">
                                 Logs
+                            </a>
+
+                            <a href="{{ route('show-admins') }}" class="dropdown-item">
+                                List Admins
                             </a>
                             <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                                 Logout

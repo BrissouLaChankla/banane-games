@@ -21,8 +21,6 @@ class GameController extends Controller
         ]);
     }
 
-
-
     // CRUD 
 
     public function showAll(){

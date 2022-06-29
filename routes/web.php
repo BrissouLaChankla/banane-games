@@ -13,6 +13,7 @@ use App\Http\Controllers\WordController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\MentionsController;
 use App\Http\Controllers\Auth\LogoutController;
+use App\Http\Controllers\AdminController;
 
 
 /*
@@ -38,8 +39,6 @@ Route::controller(GameController::class)->prefix('jeux')->group(function () {
 // ADMIN
 Route::prefix('admin')->middleware('auth')->group(function () {
 
-
-   
 
     Route::controller(DashboardController::class)->group(function() {
         Route::get('/', 'showDashboard')->name('show-dashboard-admin');
@@ -76,6 +75,14 @@ Route::prefix('admin')->middleware('auth')->group(function () {
             Route::post('/edit-word', 'editWords')->name('edit-modules-words');
         });
     });
+
+    //List Admins 
+  
+    
+        Route::get('/show-admins', [AdminController::class, 'showAdmins'])->name('show-admins');
+        Route::delete('delete/{id}', [AdminController::class, 'deleteAdmin'])->name('delete-admin');
+        // Route::delete('/delete/{id}', 'deleteAdmin')->name('delete-admin');
+      
 
 });
 
