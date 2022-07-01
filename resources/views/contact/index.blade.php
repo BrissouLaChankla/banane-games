@@ -90,7 +90,7 @@
                 <div class="col-xl-6">
                     <div class="position-relative d-flex justify-content-center pt-6">
                         <img src="{{asset('img/decorations/big-arrow-top-left.webp')}}" class="d-none d-xl-block big-arrow-top-left" alt="">
-                        <img src="{{ asset('img/mister-nanaba/mister-nanaba-contact.webp') }}" style="max-width:508px" alt="">
+                        <img src="{{ asset('img/mister-nanaba/mister-nanaba-contact.webp') }}" class="w-100" style="max-width:480px" alt="">
                     </div>
                 </div>
             </div>

@@ -19,7 +19,9 @@
             </tbody>
         </table>
     </div>
-    <div class="col-lg-4 px-10">
-        <img src="{{ asset('img/designs/trophee.webp') }}" class="img-fluid" alt="">
+    <div class="col-lg-4 px-10 my-lg-5 mt-5">
+        
+        <img src="{{ asset('img/designs/trophee.webp') }}" class="img-fluid w-100" alt="Image trophée">
+    
     </div>
 </div>

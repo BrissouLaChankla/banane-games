@@ -1,8 +1,8 @@
 <div id="triptique" class="my-10">
     <div class="container">
-        <div class="text-center mb-5">
-            <h2 class="text-primary">Pourquoi tu vas adorer apprendre avec Nanagames</h2>
-            <p class="mt-4 mb-7 subtext">
+        <div class="text-lg-center mb-5">
+            <h2 class="text-primary text-lg-start text-center">Pourquoi tu vas adorer apprendre avec Nanagames</h2>
+            <p class="mt-4 mb-7 subtext text-lg-center text-sm-start">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, similique perspiciatis consequuntur,
                 tempore dolorum amet blanditiis iste placeat earum beatae ipsa eos fugiat quam aliquam perferendis
                 suscipit iure consectetur doloribus.
@@ -15,7 +15,7 @@
                         done
                     </span></div>
                     <div class="ps-3">
-                        <h3 class="mb-1">Soutien scolaire</h3>
+                        <h3 class="mb-1 mt-xs-3">Soutien scolaire</h3>
                         <p>
                             Nos cours te permettent de t'entraîner à lire, à écouter et à parler la langue. Découvre nos
                             derniers travaux de recherche !

@@ -4,7 +4,7 @@
         <div class="row mt-3 mt-lg-8">
             <div class="col-lg-3">
                 <div class="mb-4">
-                    <h3 class="mb-lg-5 h4">Découvrez-nous</h3>
+                    <h3 class="mb-lg-5 mb-2 h4">Découvrez-nous</h3>
                     <div class="d-flex flex-column align-items-start">
                         <a href="#">Nanaba</a>
                     </div>
@@ -13,7 +13,7 @@
 
             <div class="col-lg-3">
                 <div class="mb-4">
-                    <h3 class="mb-lg-5 h4">Contact</h3>
+                    <h3 class="mb-lg-5 mb-2 h4">Contact</h3>
                     <div class="d-flex flex-column align-items-start">
                         <a href="#">Nous contacter</a>
                         <a href="#">Nous rejoindre</a>
@@ -23,26 +23,26 @@
 
             <div class="col-lg-3">
                 <div class="mb-4">
-                    <h3 class="mb-lg-5 h4">Suivez nous</h3>
+                    <h3 class="mb-lg-5 h4 mb-2">Suivez nous</h3>
                     <div class="text-nowrap">
                         <a href="https://www.facebook.com/nanabaofficiel/" class="me-4 me-lg-3"><img
-                                src="{{ asset('img/footer/akar-icons-facebook-fill.svg') }}" alt="Icon facebook"></a>
+                                src="{{ asset('img/footer/akar-icons-facebook-fill.svg') }}" alt="Icon facebook" loading="lazy"></a>
                         <a href="https://www.instagram.com/nanabaofficiel/?hl=fr" class="me-4 me-lg-3"><img
-                                src="{{ asset('img/footer/akar-icons-instagram-fill.svg') }}" alt="Icon Instagram"></a>
+                                src="{{ asset('img/footer/akar-icons-instagram-fill.svg') }}" alt="Icon Instagram" loading="lazy"></a>
                         <a href="https://twitter.com/nanabaofficiel" class="me-4 me-lg-3"><img
-                                src="{{ asset('img/footer/akar-icons-twitter-fill.svg') }}" alt="Icon Twitter"></a>
+                                src="{{ asset('img/footer/akar-icons-twitter-fill.svg') }}" alt="Icon Twitter" loading="lazy"></a>
                         <a href="https://www.linkedin.com/company/nanabaofficiel/mycompany/" class="me-4 me-lg-3"><img
-                                src="{{ asset('img/footer/akar-icons-linkedin-fill.svg') }}" alt="Icon Linkdin"></a>
+                                src="{{ asset('img/footer/akar-icons-linkedin-fill.svg') }}" alt="Icon Linkdin" loading="lazy"></a>
                         <a href="https://www.tiktok.com/@misternanaba" class="me-4 me-lg-3"><img
-                                src="{{ asset('img/footer/bi-tiktok.svg') }}" alt="Icon Tiktok"></a>
+                                src="{{ asset('img/footer/bi-tiktok.svg') }}" alt="Icon Tiktok" loading="lazy"></a>
                     </div>
                 </div>
             </div>
 
             <div class="col-lg-3">
-                <div class="mb-4">
+                <div class="mb-4 mt-2 mt-lg-0">
 
-                <h3 class="mb-lg-5 h4">S’inscrire à la newsletter</h3>
+                <h3 class="mb-lg-5 h4 mb-2">S’inscrire à la newsletter</h3>
                     {!! Form::open(['url' => route('add-email-newsletter'), 'class' => 'd-flex']) !!}
                     <div class="flex-grow-1 mw-300">
                         {{ Form::email('email', null, ['class' => 'form-control text-muted h-100 border-0 ', 'placeholder' => 'Votre email', 'required']) }}

@@ -7,7 +7,7 @@
         </div>
         <div class="row">
             @foreach ($games as $game)
-            <div class="col-3">
+            <div class="col-md-3">
                 <div class="card mb-3 position-relative overflow-hidden">
                     @if(!$game->is_available)
                         <div class="draft bg-danger">
@@ -16,7 +16,7 @@
                             </span>
                         </div>
                     @endif
-                    <img src="{{ asset($game->thumbnail_img_url) }}" class="@if(!$game->is_available) black_white @endif card-img-top" alt="...">
+                    <img src="{{ asset($game->thumbnail_img_url) }}" class="@if(!$game->is_available) black_white @endif card-img-top" alt="Miniature de jeu">
                     <div class="card-body">
                         <h5 class="card-title">{{$game->title}}</h5>
                         <p class="card-text">{{$game->short_description}}</p>
