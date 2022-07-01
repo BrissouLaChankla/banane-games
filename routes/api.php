@@ -23,7 +23,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 
 Route::controller(WordController::class)->prefix('get')->group(function () {
-    Route::get('/randomword', 'getRandomWord');
+    Route::get('{difficulty}/randomword', 'getRandomWord');
     Route::get('/dailyword', 'getDailyWord');
 });
 

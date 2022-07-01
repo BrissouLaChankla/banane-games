@@ -19,14 +19,40 @@ class WordController extends Controller
         return response()->json($words);
     }
 
-    public function getRandomWord() {
-        $word = Word::inRandomOrder()->first()->name;
-        return response()->json($word);
+    public function getRandomWord($difficulty) {
+
+        switch($difficulty) {
+            case('easy'):
+ 
+                $word = Word::whereRaw('LENGTH(name) < 5');
+                break;
+ 
+                case('hard'):
+                $word = Word::whereRaw('LENGTH(name) > 7');
+                break;
+
+            default:
+               $word = Word::whereRaw('LENGTH(name) > 4')->whereRaw('LENGTH(name) < 8');
+
+        }
+        $word = $word->inRandomOrder()->first();
+        $theme = $word->theme;
+        $result = [
+            "name" => $word->name,
+            "theme" => $theme->name
+        ];
+        return response()->json($result);
+       
     }
 
     public function getDailyWord() {
-        $word = Word::where('is_daily_word', '=', 1)->first()->name;
-        return response()->json($word);
+        $word = Word::where('is_daily_word', '=', 1)->first();
+        $theme = $word->theme;
+        $result = [
+            "name" => $word->name,
+            "theme" => $theme->name
+        ];
+        return response()->json($result);
     }
 
     public function changeDailyWord(){
@@ -35,7 +61,7 @@ class WordController extends Controller
         $dailyword->update(['is_daily_word' => 0]);
 
         // Setup new daily word
-        $newdailyword = Word::inRandomOrder()->first();
+        $newdailyword = Word::whereRaw('LENGTH(name) > 4')->whereRaw('LENGTH(name) < 8')->inRandomOrder()->first();
         $newdailyword->update(['is_daily_word' => 1]);
     }
 
