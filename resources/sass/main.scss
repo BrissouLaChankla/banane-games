@@ -2,9 +2,27 @@
     background-color: var(--main-color-lighter);
 }
 
+.subtext {
+    font-size: 18px!important;
+}
+
 #triptique {
     img { 
         width: 40px;
+    }
+    p {
+        font-size: 16px;
+    }
+}
+
+// Hero
+#hero {
+    h1 {
+        font-size: 56px;
+    }
+    p {
+        line-height: 2;
+        font-size:20px;
     }
 }
 
@@ -75,19 +93,14 @@
 #nanabanner {
     overflow: hidden;
     position: relative;
-    .righ-pic {
-        top: -50px;
-        position: absolute;
-        height: 500px;
+    .right-pic {
+        max-width: 358px;
     }
 }
 
 // Game
 
 .header-game {
-    height:200px;
-
-    color:white;
 
     display: flex;
     align-items: center;
@@ -98,38 +111,169 @@
     background-size: cover;
     background-repeat:no-repeat;
     background-attachment: fixed;
+
 }
 
-@media screen and (min-width: 992px) {
-    .right-game-desc {
-        height:calc(100% - 85px);
-        display: flex;
-        flex-direction:column;
-        justify-content: center;
-    }
-}
+// @media screen and (min-width: 992px) {
+//     .right-game-desc {
+//         height:calc(100% - 85px);
+//         display: flex;
+//         flex-direction:column;
+//         justify-content: center;
+//     }
+// }
 
 
 
 // Contact
 
-#contact { 
-    min-height: 80vh;
-    background-image:url("/img/contact/nanagames_wallpaper_contact.svg");
-    background-repeat:no-repeat;
-    background-size: 33%;
-    background-position: top right;
+.form-floating > .form-control:focus ~ label, .form-floating > .form-control:not(:placeholder-shown) ~ label, .form-floating > .form-select ~ label {
+    transform: scale(0.75) translateY(-1rem) translateX(0.15rem);
 }
 
+#contact {
+    input[type=number], input[type=text], input[type=tel], input[type=email] {
+        &:focus {
+            box-shadow: none!important;
+        }
+    }
+}
 #list-pj {
     overflow-y: auto;
 }
 
-.add-file-img-contact {
-    position: absolute;
-    top: 50%;
-    right: 20px;
-    width: 20px;
-    transform: translateY(-50%);
-    cursor: pointer;
+
+// Blog
+
+.section-title-blog {
+    font-size:2.63rem;
 }
+
+
+// Decorations
+
+.top-left-pop {
+    position: absolute;
+    width: 48px;
+    top: -23px;
+    left: -20px;
+}
+
+.right-corner-pop {
+    position: absolute;
+    width: 48px;
+    top: -23px;
+    right: -35px;
+}
+
+.top-left-arrow {
+    position: absolute;
+    height: 62.5px;
+    bottom: -30px;
+    right: -130px;
+}
+
+.yellow-underline {
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    z-index: -1;
+    width: 100%;
+}
+
+.zigzag-bottom-left {
+    position: absolute;
+    height: 145px;
+    bottom: -60px;
+    left: -75px;
+}
+
+.arrow-bottom-right {
+    width: 115px;
+    position: absolute;
+    top: -125px;
+}
+
+.big-arrow-top-left {
+    position: absolute;
+    top: 0;
+    left: 40%;
+    transform: translate(-50%, -100%);
+    width: 300px;
+}
+
+.top-left-swoosh {
+    position: absolute;
+    width: 76px;
+    right: -60px;
+    top: -70px;
+}
+
+.tick{
+    color: white;
+    background-color: var(--secondary);
+    border-radius: 50px;
+    font-size: 2rem;
+    padding: 4px;
+}
+// icons 
+
+.rs-icons {
+    a {
+        padding:8px 10px;
+        border-radius:50px;
+        background-color: $primary;
+    }
+}
+// about 
+
+.nanaba-top-left {
+    position: absolute;
+    transform: translateY(-50%);
+    z-index: -1;
+    top: -10px;
+    left: 0;
+}
+
+#team {
+    .right-corner-pop {
+        top: -50px;
+    }
+    .team-carousel {
+        img {
+            max-height: 320px;
+            width:100%;
+            object-fit: cover;
+            object-position: top;
+        }
+    }
+}
+
+#concept {
+    .mister-nanaba-laptop {
+        max-width:422px;
+    }
+   .tick {
+    font-size:3rem;
+    padding: 0;
+   }
+
+}
+
+.vertical-yellow { 
+    width: 48px;
+    background-color:var(--main-color-lighter);
+    height: 110%;
+    border-radius: 30px;
+    z-index: -1;
+    position: absolute;
+    top: -5%;
+}
+
+.design-img {
+    background-color:#F2F2F2;
+    img{
+        width: 344px;
+    }
+}
+

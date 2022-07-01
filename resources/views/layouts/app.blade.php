@@ -10,9 +10,9 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" ></script>
+  
 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
@@ -25,6 +25,8 @@
         </main>
         @include('layouts.footer')
     </div>
+      <!-- Scripts -->
+    <script src="{{ asset('js/app.js') }}" ></script>
     @stack('scripts')
 </body>
 

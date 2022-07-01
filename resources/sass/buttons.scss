@@ -3,9 +3,9 @@
     border-radius: 12px;
     border: 0;
 
-    font-family: $fredoka-font-family;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
+    font-family: $font-family-base;
+    font-weight: bold;
+    letter-spacing: .8px;
 
     &:active {
         border-bottom:0;
@@ -16,12 +16,14 @@
 }
 .btn-primary {
     background-color: var(--main-color);
-    color: white;
-
+    color: white!important;
     border-bottom: 5px solid var(--main-color-dark);
 
+    
     &:hover {
         background-color: var(--main-color-light);
+        border-color: var(--main-color-dark);
+
     }
 }
 
@@ -34,3 +36,4 @@
         color: var(--main-color-light);
     }
 }
+

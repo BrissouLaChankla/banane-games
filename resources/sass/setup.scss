@@ -2,19 +2,38 @@
 //     --main-color-dark: #ff6209;
 //     --main-color: #fd6c12;
 //     --main-color-light: #ffa36f;
-//     --main-color-lighter: #fee8db;
+    //     --main-color-lighter: #fee8db;
 //     --red:red;
 //     --green:green;
 // }
 
 
 :root {
-    --main-color-dark: #1899d6;
-    --main-color: #1cb0f6;
-    --main-color-light: #48bff7;
-    --main-color-lighter: #ddf4ff;
+    --main-color-dark: #B15301;
+    --main-color: #fd7f12;
+    --main-color-light: #FD9A44;
+    --main-color-lighter: #FFF7F0;
+    --secondary: #ffd800;
     --red:red;
     --green:green;
+    --gray-light:#fafafa;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+
+.fit-content {
+    width: fit-content;
+}
+
+.fit-cover {
+    object-fit: cover;
+}
+
+.r-m-45 {
+    transform: rotate(-45deg);
 }
 
 
@@ -25,7 +44,7 @@
     main {
         flex: 1;
         // Equals the height of the fixed nav
-        margin-top:78px;
+        margin-top:85px;
     }
 }
 
@@ -34,19 +53,90 @@ h2,
 h3,
 h4,
 h5,
-h6,
-a,
-.form-control {
+h6 {
     font-family: $fredoka-font-family;
+    margin: 0;
+}
+
+a,button,.btn, p {
+    // 18px
+    font-size:1.125rem;
+}
+
+p{
+    margin-bottom: 0;
+}
+
+.card-title {
+    font-family: $font-family-base!important;
+    font-weight: 700;
+    font-size: 1.125rem;
+    line-height: 24px;
+    letter-spacing: .72px;
+}
+
+.card-text {
+    line-height: 1.75;
+    letter-spacing: 0.64px;
+}
+
+.card p {
+    font-size:1rem;
+}
+
+.mw-300{
+    max-width: 300px;
+}
+
+p{
+    color:$text-muted;
+}
+
+.p-big {
+    line-height: $line-height-big;
+    font-size: $p-font-size-big;
+}
+
+.spacer {
+    display: block;
+    &-96 {
+        height: 96px;
+    }
+    &-72 {
+        height: 72px;
+    }
+    &-56{
+        height: 56px;
+    }
+    &-48 {
+        height: 48px;
+    }
+    &-24 {
+        height: 24px;
+    }
+}
+
+.bg-muted {
+    background-color: $text-muted;
+}
+
+body {
+    letter-spacing: .8px;
 }
 
 a{
     text-decoration: none;
 }
 
-p {
-    font-size: 1rem;
+
+.font-title {
+  font-family: $fredoka-font-family;
 }
+
+.font-base {
+    font-family: $font-family-base;
+}
+
 
 .black_white {
     filter:grayscale(1);
@@ -58,4 +148,50 @@ p {
         opacity: .5;
     }
 }
+
+.object-fit {
+    object-fit: cover;
+}
+
+.img-article{
+    width: 606px;
+    height: 386px;
+}
+
+.video-article{
+    width: 800px;
+    height: 400px;
+}
+
+
+
+.outside_arrows {
+
+    .splide__arrow--prev {
+        left: -2.5em !important;
+        
+    }
+    
+    .splide__arrow--next {
+        right: -2.5em;
+        
+    }
+    
+    @media all and (max-width: 768px) {
+        .splide__arrows {
+            display: none;
+        }
+    }
+
+    .splide__arrow svg {
+        fill: #fd7f12 !important;
+        height: 2em;
+        width: 2em;
+    }
+    
+    .splide__arrow {
+        background-color: #ff000000;
+    }
+}
+
 

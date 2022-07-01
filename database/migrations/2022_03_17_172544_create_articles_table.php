@@ -17,6 +17,8 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->string('slug');
+            $table->boolean('is_published')->default(0);
+            $table->text('description')->nullable();
             $table->text('content')->nullable();
             $table->string('thumbnail_img_url')->nullable();
             $table->string('header_img_url')->nullable();

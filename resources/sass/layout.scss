@@ -1,27 +1,16 @@
 //Footer
-#prefooter {
-    display: flex;
-    align-items: center;
-    .row {
-        min-height: 350px;
-    }
-    img {
-        opacity: 0.3;
-    }
-}
+
 
 footer {
-    background: var(--main-color);
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: .5rem 0;
-    // border-top: 2px solid white;
+    .nanagames{
+        font-size: 2.875rem;
+    }
     a {
+        margin-bottom:1rem;
         color: var(--main-color-lighter);
         text-decoration: none;
-        padding: 0.75rem;
-        margin: 0.25rem;
+        font-family: $font-family-base;
+
         &:hover {
             color: white;
         }
@@ -32,8 +21,9 @@ footer {
 
 nav {
     a {
-        text-transform: uppercase;
         letter-spacing: .5px;
+        font-family: $fredoka-font-family;
+
         &:hover {
             img{
                 opacity: 1;

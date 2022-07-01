@@ -1,21 +1,21 @@
 @extends('layouts.app')
 @section('content')
-    <header class="bg-dark header-game">
+    <header class="bg-lighter header-game py-4">
         <div class="container">
             <nav aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="/">Accueil</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">{{ $game->title }}</li>
+                <ol class="breadcrumb align-items-center">
+                    <span class="breadcrumb-item"><a class="font-base text-capitalize text-dark" href="/">Accueil</a></span>
+                    <span class="breadcrumb-item active text-primary" aria-current="page">{{ $game->title }}</span>
                 </ol>
             </nav>
-            <h1>
+            <h1 class="mb-4 mt-8">
                 {{ $game->title }}
             </h1>
-            <i>Jeu de {{ $game->matiere }}</i> <span class="mx-2">|</span> @include('sections.game-status')
+            <h2 class="theme h5 font-base d-inline-block text-muted">Jeu de {{ $game->matiere }}</h2> <span class="mx-4">|</span> @include('sections.game-status')
         </div>
     </header>
 
-    <div class="container pt-5">
+    <div class="container pt-7 carousel-game">
         <div class="row">
             <div class="col-lg-6">
                 <div id="main-slider" class="splide">
@@ -23,7 +23,7 @@
                         <ul class="splide__list">
                             @foreach ($game->pictures as $picture)
                                 <li class="splide__slide">
-                                    <img src="{{ asset('img/games/screens/' . $picture->img_url) }}" alt="">
+                                    <img src="{{ asset($picture->img_url) }}" alt="Image du jeu">
                                 </li>
                             @endforeach
                         </ul>
@@ -32,7 +32,7 @@
                 <ul id="thumbnails" class="thumbnails">
                     @foreach ($game->pictures as $picture)
                         <li class="thumbnail">
-                            <img src="{{ asset('img/games/screens/' . $picture->img_url) }}" alt="">
+                            <img src="{{ asset( $picture->img_url) }}" alt="Miniature du jeu">
                         </li>
                     @endforeach
                 </ul>
@@ -41,12 +41,12 @@
                 <div class="ps-3 m-auto right-game-desc">
                     <h2 class="text-center">Quel est le principe du jeu ?</h2>
                     <p class="my-4">
-                        {!! nl2br(e($game->description)) !!}
+                        {!! nl2br($game->description) !!}
                     </p>
                     <div class="text-center mb-5 mb-lg-0">
                         <a @if ($game->is_available) href="{{ $game->link }}" @else class="black_white" @endif
                             target="_blank">
-                            <x-button name="Jouer à {!! $game->title !!}" class="mt-2" color="primary" />
+                            <x-button name="Jouer !" class="mt-2" color="primary" />
                         </a>
                     </div>
                 </div>
@@ -54,15 +54,21 @@
         </div>
     </div>
 
+    <div class="container mt-10">
+        <h2 class="text-lg-start text-center">
+            <x-underlined word="Classement" />
+        </h2>
+        <p class="p-big py-4">Nanaba est une application qui allie gestion du temps d’écran et éducation.</p>
+        @include('sections.ranking')
+    </div>
+
     <div id="others">
-        <div class="container p-xl-5">
-            <div class="text-center mb-4">
-                <h2>Découvrez nos autres jeux</h2>
-            </div>
-            @include('sections.games', ['games' => $others, 'small_card' => true])
+        <div class="container mt-10">
+            @include('sections.games', ['mainTitle' => 'Découvrez nos autres jeux', 'games' => $others])
         </div>
     </div>
 @endsection
+
 
 @push('scripts')
     <script defer>

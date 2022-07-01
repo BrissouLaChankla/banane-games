@@ -14,4 +14,8 @@ class GamePicture extends Model
         'img_url',
         'game_id'
     ];
+
+    public function game() {
+        return $this->belongsTo(Game::class);
+    }
 }

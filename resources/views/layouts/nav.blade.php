@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm fixed-top py-3">
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top py-3">
     <div class="container">
         <a class="navbar-brand" href="{{ url('/') }}">
             {{ config('app.name', 'Laravel') }}
@@ -11,11 +11,25 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <!-- Left Side Of Navbar -->
             <ul class="navbar-nav me-auto">
-
+ 
             </ul>
 
             <!-- Right Side Of Navbar -->
             <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+                    <a class="nav-link {{ Route::is('show-about') ? 'active' : '' }}"
+                        href="{{ route('show-about') }}">
+                        {{-- Pas réussi à variabiliser URL, à retenter --}}
+                        @if (Route::is('show-about'))
+                            <img src="{{ asset('img/navbar/about_colored.webp') }}" class="me-1"
+                                alt="Icone section About | Nanagames">
+                        @else
+                            <img src="{{ asset('img/navbar/about.webp') }}" class="me-1"
+                                alt="Icone section About | Nanagames">
+                        @endif
+                        A propos
+                    </a>
+                </li>
                 <li class="nav-item dropdown">
                     <a id="navbarDropdown"
                         class="nav-link dropdown-toggle {{ Route::is('show-game') ? 'active' : '' }}" role="button"
@@ -69,6 +83,21 @@
                         Contact
                     </a>
                 </li>
+
+                @auth 
+
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('show-dashboard-admin') }}">
+                        <img src="{{ asset('img/navbar/dash.webp') }}" class="me-1"
+                                alt="Icone section Dashboard">
+                        Dashboard 
+                    </a>
+                </li>
+                
+                @endauth
+
+
+           
             </ul>
         </div>
     </div>

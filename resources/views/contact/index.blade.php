@@ -1,50 +1,101 @@
 @extends('layouts.app')
 @section('content')
-    <div id="contact" class="bg-lighter d-flex align-items-center p-3">
+    <div id="contact" class="d-flex align-items-center pt-10">
         <div class="container">
-            <h1>Il faut qu'on parle...</h1>
-            <div class="row">
-                <div class="col-xl-5">
-                    <p class="mt-3 mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil natus voluptate
-                        enim doloribus, rerum eligendi, sed placeat in nesciunt, adipisci porro officia ipsum officiis
-                        tempora aperiam. Soluta molestiae iusto laudantium.</p>
-                    {!! Form::open(['url' => route('send-mail'), 'files' => true]) !!}
+            <h1 class="text-primary text-center">Nous contacter</h1>
+            <p class="mt-5 text-center">Des questions ? Un problème ? nous serons ravis de vous répondre</p>
+            <div class="row mt-10 align-items-center">
+                <div class="col-xl-6 position-relative">
+                    <div class="bg-white py-7 px-5 rounded shadow">
+                        <h3 class="text-primary h4">Formulaire de contact</h3>
+                        {!! Form::open(['url' => route('send-mail'), 'files' => true]) !!}
 
-                    <div class="position-relative">
-                        {{ Form::email('email', null, ['class' => 'form-control text-muted h-100 p-4 mt-3 border-0 shadow-sm','placeholder' => 'john.doe@gmail.com','required']) }}
-                        <img src="{{ asset('img/contact/nanagames_clip_contact.webp') }}" alt="add-screen-contact"
-                            onclick="document.querySelector('#pj').click()" class="add-file-img-contact">
-                    </div>
-                    <ul id="list-pj" class="form-control border-0 text-muted mt-4 p-4 d-none">
+                        <div class="row">
+                            <div class="col-lg-6 mt-6">
+                                <div class="form-floating">
+                                    {{ Form::text('firstname', null, ['class' => 'form-control text-muted border-0 bg-white border-bottom rounded-0 ps-0', 'id' => 'floatingFirstname', 'placeholder' => 'Prénom *', 'required']) }}
+                                    {{ Form::label('floatingFirstname', 'Prénom *', ['class' => 'fw-bold text-muted ps-0']) }}
+                                </div>
+                            </div>
+                            <div class="col-lg-6 mt-6">
+                                <div class="form-floating">
+                                    {{ Form::text('lastname', null, ['class' => 'form-control text-muted border-0 bg-white border-bottom rounded-0 ps-0', 'id' => 'floatingLastname', 'placeholder' => 'Nom *', 'required']) }}
+                                    {{ Form::label('floatingLastname', 'Nom *', ['class' => 'fw-bold text-muted ps-0']) }}
+                                </div>
+                            </div>
+                            <div class="col-lg-6 mt-6">
+                                <div class="form-floating">
+                                    {{ Form::email('email', null, ['class' => 'form-control text-muted border-0 bg-white border-bottom rounded-0 ps-0', 'id' => 'floatingEmail', 'placeholder' => 'Email *', 'required']) }}
+                                    {{ Form::label('floatingEmail', 'Email *', ['class' => 'fw-bold text-muted ps-0']) }}
+                                </div>
+                            </div>
+                            <div class="col-lg-6 mt-6">
+                                <div class="form-floating">
+                                    {{ Form::tel('phone', null, ['class' => 'form-control text-muted border-0 bg-white border-bottom rounded-0 ps-0', 'id' => 'floatingTel', 'placeholder' => 'Téléphone']) }}
+                                    {{ Form::label('floatingTel', 'Téléphone', ['class' => 'fw-bold text-muted ps-0']) }}
+                                </div>
+                            </div>
+                        </div>
 
-                    </ul>
-                    {{ Form::textarea('content', null, ['class' => 'form-control text-muted h-100 p-4 mt-4 border-0 shadow-sm','placeholder' => 'Votre message...','required']) }}
+                        {{-- Handle the errors --}}
+                        @if ($errors->any())
+                            <ul class="alert alert-danger mt-2 p-3" role="alert">
+                                @foreach ($errors->all() as $error)
+                                    <li class="ms-3 text-start">{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                            {{-- Handle the success --}}
+                        @elseif(Session::has('contact-success'))
+                            <ul class="alert alert-success mt-3 p-3" role="alert">
+                                <li class="ms-3 text-start">{{ Session::get('contact-success') }}</li>
+                            </ul>
+                        @endif
+
+                        {{ Form::label('content', 'Message *', ['class' => 'fw-bold text-muted mt-8']) }}
+                        {{ Form::file('pj[]', ['class' => 'd-none', 'id' => 'pj', 'multiple']) }}
 
 
-                    <div class="form-check mt-4">
-                        {{ Form::checkbox('newsletter', 1, false, ['id' => 'newsletter', 'class' => 'form-check-input']) }}
-                        {{ Form::label('newsletter', 'Je m\'abonne à la Newsletter', ['class' => 'ms-2 form-check-label']) }}
-                    </div>
+                        <div class="bg-muted rounded text-white d-flex align-items-center fw-bold px-1 py-1 mt-1 mb-2 pointer fit-content"
+                            onclick="document.querySelector('#pj').click()">
+                            <span class="material-symbols-rounded r-m-45">
+                                attachment
+                            </span>
+                            <small class="px-1">
+                                Pièces jointes
+                            </small>
+                        </div>
+                        <ul id="list-pj" class="form-control border-0 text-muted mt-4 p-4 d-none">
 
-
-                    {{ Form::file('pj[]', ['class' => 'd-none', 'id' => 'pj', 'multiple']) }}
-
-                    {{ Form::submit('Confirmer', ['class' => 'btn btn-primary mt-4']) }}
-                    {!! Form::close() !!}
-                    {{-- Handle the errors --}}
-                    @if ($errors->any())
-                        <ul class="alert alert-danger mt-2 p-3" role="alert">
-                            @foreach ($errors->all() as $error)
-                                <li class="ms-3 text-start">{{ $error }}</li>
-                            @endforeach
                         </ul>
-                        {{-- Handle the success --}}
-                    @elseif(Session::has('contact-success'))
-                        <ul class="alert alert-success mt-3 p-3" role="alert">
-                            <li class="ms-3 text-start">{{ Session::get('contact-success') }}</li>
-                        </ul>
-                    @endif
+
+
+                        {{ Form::textarea('content', null, ['class' => 'form-control text-muted h-100 p-4 mt-4 rounded-0', 'rows' => 6, 'required']) }}
+
+
+                        <div class="form-check mt-4">
+                            {{ Form::checkbox('newsletter', 1, false, ['id' => 'newsletter', 'class' => 'form-check-input']) }}
+                            {{ Form::label('newsletter', 'J’accepte que mes informations soient utilisées par Nanagames afin de me recontacter.', ['class' => 'ms-1 form-check-label text-muted small']) }}
+
+
+                        </div>
+
+
+                        {{ Form::submit('Envoyer', ['class' => 'btn btn-primary mt-4']) }}
+                        {!! Form::close() !!}
+                    </div>
+
+                    <img src="{{ asset('img/decorations/zigzag-bottom-left.webp') }}" class="zigzag-bottom-left d-none d-lg-block"
+                    alt="Decoration zig zag">
                 </div>
+                <div class="col-xl-6">
+                    <div class="position-relative d-flex justify-content-center pt-6">
+                        <img src="{{asset('img/decorations/big-arrow-top-left.webp')}}" class="d-none d-xl-block big-arrow-top-left" alt="">
+                        <img src="{{ asset('img/mister-nanaba/mister-nanaba-contact.webp') }}" class="w-100" style="max-width:480px" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="pt-10">
+                @include('sections.games', ['mainTitle' => "Découvrir les jeux"])
             </div>
         </div>
     </div>

@@ -25,7 +25,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $games = DB::table('games')->orderBy('is_available', 'DESC')->get();
+        $games = DB::table('games')->whereNull('deleted_at')->orderBy('is_available', 'DESC')->get();
         View::share('games', $games);
     }
 }
