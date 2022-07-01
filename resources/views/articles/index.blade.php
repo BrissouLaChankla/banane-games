@@ -10,17 +10,17 @@
    
         <div class="text-center">
             <img src={{asset($article->header_img_url)}}
-                class="img-article img-fluid fit-cover"  alt="">
+                class="img-article img-fluid fit-cover"  alt="Image article ">
         </div>
 
-        <div class="d-flex fw-bold justify-content-between align-items-center mt-8">
+        <div class="d-flex flex-wrap fw-bold justify-content-between align-items-center mt-8">
             @isset($article->updated_at)
                 <div class="d-flex fw-bold justify-content-star">
                     <span class="material-symbols-rounded text-muted">calendar_today</span>
                     <time class="card-text text-muted ms-2" datetime="{{$article->updated_at->format('Y-m-d')}}">{{$article->updated_at->format('d/m/Y')}}</time>
                 </div>
             @endisset
-            <div class="rs-icons">
+            <div class="rs-icons mt-3 mt-lg-0">
                 <a href="https://www.facebook.com/nanabaofficiel/" class="ms-2 hvr-grow"><img
                     src="{{ asset('img/footer/akar-icons-facebook-fill.svg') }}" alt="Icon facebook"></a>
             <a href="https://www.instagram.com/nanabaofficiel/?hl=fr" class="ms-2 hvr-grow"><img

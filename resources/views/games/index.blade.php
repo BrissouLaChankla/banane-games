@@ -23,7 +23,7 @@
                         <ul class="splide__list">
                             @foreach ($game->pictures as $picture)
                                 <li class="splide__slide">
-                                    <img src="{{ asset($picture->img_url) }}" alt="">
+                                    <img src="{{ asset($picture->img_url) }}" alt="Image du jeu">
                                 </li>
                             @endforeach
                         </ul>
@@ -32,7 +32,7 @@
                 <ul id="thumbnails" class="thumbnails">
                     @foreach ($game->pictures as $picture)
                         <li class="thumbnail">
-                            <img src="{{ asset( $picture->img_url) }}" alt="">
+                            <img src="{{ asset( $picture->img_url) }}" alt="Miniature du jeu">
                         </li>
                     @endforeach
                 </ul>
@@ -55,7 +55,7 @@
     </div>
 
     <div class="container mt-10">
-        <h2>
+        <h2 class="text-lg-start text-center">
             <x-underlined word="Classement" />
         </h2>
         <p class="p-big py-4">Nanaba est une application qui allie gestion du temps d’écran et éducation.</p>

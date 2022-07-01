@@ -78,49 +78,50 @@
         </div>
     </div>
 
+    <div class="table-responsive">
+        <table class="table mt-5">
+            <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Nom</th>
+                <th scope="col">Email</th>
+                <th scope="col">Mot de passe</th>
+                <th scope="col">Suppression</th>
+            </tr>
+            </thead>
+            <tbody>
+                @foreach ($admins as $admin)
+                    <tr>
+                        <th scope="row">{{ $admin->id }}</th>
+                        <td>{{ $admin->name }} </td>
+                        <td>{{ $admin->email }} </td>
+                        <td>
+                            <form method="POST" action="{{ route('password.email') }}">
+                                @csrf
+                                    {{Form::hidden('email', $admin->email)}}
 
-    <table class="table mt-5">
-        <thead>
-        <tr>
-            <th scope="col">Id</th>
-            <th scope="col">Nom</th>
-            <th scope="col">Email</th>
-            <th scope="col">Mot de passe</th>
-            <th scope="col">Suppression</th>
-        </tr>
-        </thead>
-        <tbody>
-            @foreach ($admins as $admin)
-                <tr>
-                    <th scope="row">{{ $admin->id }}</th>
-                    <td>{{ $admin->name }} </td>
-                    <td>{{ $admin->email }} </td>
-                    <td>
-                        <form method="POST" action="{{ route('password.email') }}">
+                                        <button type="submit" class="btn btn-primary">
+                                            {{ __('Reset Link') }}
+                                        </button>
+                            </form>
+                        </td>
+                        <td>
+
                             @csrf
-                                {{Form::hidden('email', $admin->email)}}
+                            <div onclick="deleteAdmin({{ $admin->id }})" class="btn btn-danger">
+                                <span class="material-symbols-rounded">
+                                    delete
+                                </span>
+                            </div>
+                        </td>
+                        
+                    </tr>
+                @endforeach
 
-                                    <button type="submit" class="btn btn-primary">
-                                        {{ __('Send Password Reset Link') }}
-                                    </button>
-                        </form>
-                    </td>
-                    <td>
-
-                        @csrf
-                        <div onclick="deleteAdmin({{ $admin->id }})" class="btn btn-danger">
-                            <span class="material-symbols-rounded">
-                                delete
-                            </span>
-                        </div>
-                    </td>
-                    
-                </tr>
-            @endforeach
-
-        
-        </tbody>
-    </table>
+            
+            </tbody>
+        </table>
+    </div>
 </div>
 
 
