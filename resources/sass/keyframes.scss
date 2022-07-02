@@ -46,3 +46,15 @@
     transform: scale(1.1);
     background-color: var(--main-color-dark);
   }
+
+  @keyframes float {
+    0% {
+      transform: translatey(0px);
+    }
+    50% {
+      transform: translatey(-15px);
+    }
+    100% {
+      transform: translatey(0px);
+    }
+  }

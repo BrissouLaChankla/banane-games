@@ -26,7 +26,6 @@
         VanillaTilt.init(document.querySelectorAll(".game-thumb"), {
             scale: 1.05
         });
-
         
     </script>
 

@@ -63,8 +63,9 @@ Route::prefix('admin')->middleware('auth')->group(function () {
         Route::get('/all', 'showAll')->name('show-all-games');
 
         Route::post('/create', 'postEditCreateGame')->name('post-edit-create-game');
-
         Route::delete('/delete/{id}', 'deleteGame')->name('delete-game');
+
+        Route::delete('/delete/screen/{id}', 'deleteScreen')->name('delete-screen');
     });
 
     Route::prefix('modules')->group(function() {
@@ -81,8 +82,6 @@ Route::prefix('admin')->middleware('auth')->group(function () {
     
         Route::get('/show-admins', [AdminController::class, 'showAdmins'])->name('show-admins');
         Route::delete('delete/{id}', [AdminController::class, 'deleteAdmin'])->name('delete-admin');
-        // Route::delete('/delete/{id}', 'deleteAdmin')->name('delete-admin');
-      
 
 });
 

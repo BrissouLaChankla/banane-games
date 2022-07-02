@@ -115,7 +115,7 @@
                     alt="Decoration zig zag">
                 @include('sections.teamcarousel')
             </div>
-            <div id="concept" class="mt-11 mb-10 row">
+            <div id="concept" class="mt-11 row">
                 <div class="col-lg-6 ">
                     
                     <h2 class="text-lg-start text-center">Pourquoi ce
