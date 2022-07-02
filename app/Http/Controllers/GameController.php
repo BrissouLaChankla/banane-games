@@ -50,10 +50,10 @@ class GameController extends Controller
     }
 
     public function postEditCreateGame(Request $request) {
-
         $validator = Validator::make($request->all(), [
             'img_url' => 'image|mimes:jpeg,png,jpg,gif,webp',
             'title' => 'required|string|min:3|max:255',
+            'matiere' => 'required|string|min:3|max:255',
             'short_description' => 'required|string|min:3|max:255',
             'link' => 'required|string|min:3|max:255',
             'description' => 'required|string|min:3'

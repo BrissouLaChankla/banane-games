@@ -48,7 +48,7 @@
                     <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                         @foreach ($games as $game)
                             <a href="{{ route('show-game', ['slug' => $game->slug]) }}" class="dropdown-item">
-                                {{ $game->matiere }}
+                                {{ $game->title }}
                             </a>
                         @endforeach
                     </div>
