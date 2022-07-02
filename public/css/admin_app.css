@@ -26,8 +26,7 @@
 }
 
 .r-m-45 {
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
 
 #app {
@@ -128,23 +127,16 @@ a {
 }
 
 .black_white {
-  -webkit-filter: grayscale(1);
-          filter: grayscale(1);
+  filter: grayscale(1);
 }
 
 .form-control {
   border-radius: 12px;
 }
-.form-control::-webkit-input-placeholder {
-  opacity: 0.5;
-}
 .form-control::-moz-placeholder {
   opacity: 0.5;
 }
 .form-control:-ms-input-placeholder {
-  opacity: 0.5;
-}
-.form-control::-ms-input-placeholder {
   opacity: 0.5;
 }
 .form-control::placeholder {
@@ -184,4 +176,10 @@ a {
 }
 .outside_arrows .splide__arrow {
   background-color: #ff000000;
+}
+
+.del-screen {
+  position: absolute;
+  top: 5px;
+  right: 5px;
 }
