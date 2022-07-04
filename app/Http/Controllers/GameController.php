@@ -126,8 +126,8 @@ class GameController extends Controller
             }
 
         
+        }
         return redirect()->route('show-all-games');
-    }
 }
 
 public function deleteScreen($id) {
