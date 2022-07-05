@@ -53,6 +53,9 @@ Route::prefix('admin')->middleware('auth')->group(function () {
         Route::post('/create', 'postEditCreateArticle')->name('post-edit-create-article');
 
         Route::delete('/delete/{id}', 'deleteArticle')->name('delete-article');
+
+        Route::post('/fav/{action}/{id}', 'editArticleFav')->name('edit-article-fav');
+
     });
 
     

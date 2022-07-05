@@ -110,6 +110,17 @@ class BlogController extends Controller
         $article->delete();
     }
 
-  
+    
+    public function editArticleFav($action, $id) {
+        $article = Article::find($id);
+
+        if($action === 'remove'){
+            $article->update(['is_fav' => 0 ]);
+        }
+        else {
+            $article->update(['is_fav' => 1 ]);
+        }
+
+    }
 
 }
