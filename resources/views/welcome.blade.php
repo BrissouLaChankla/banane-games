@@ -29,7 +29,7 @@
                     </div>
                 </div>
                 <div class="col-lg-6 mt-8 mt-lg-0 px-8 ps-lg-10 pe-lg-0">
-                    <img src="{{ asset('img/games/thumb/geoguessr.webp') }}" class="img-fluid hero-img"
+                    <img src="{{ asset('img/games/thumb/geoguessr.webp') }}" width="504" height="518" class="img-fluid hero-img"
                         alt="Image du jeu Nanagames à la une">
                 </div>
             </div>
