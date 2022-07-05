@@ -7,8 +7,8 @@
         <div class="col-6 col-lg-4 px-4 pb-3 ">
             <a href="{{ route('show-game', ['slug' => $game->slug]) }}"
                 class="@if(!$game->is_available) black_white @endif small game-thumb rounded shadow d-block"
-                style="background-image:linear-gradient(transparent, 75%, rgba(0, 0, 0, 0.85)), url('{{ asset($game->thumbnail_img_url) }}');">
-                <small class="matiere">{{ $game->matiere }}</small>
+                style="background-image:url('{{ asset($game->thumbnail_img_url) }}');">
+                <small class="matiere badge bg-primary">{{ $game->matiere }}</small>
             </a>
             <a class="text-dark" href="{{ route('show-game', ['slug' => $game->slug]) }}">
                 <h3 class=" mb-3 mt-4">{{ $game->title }}</h3>

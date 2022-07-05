@@ -23,33 +23,56 @@ nav {
     a {
         letter-spacing: .5px;
         font-family: $fredoka-font-family;
+        
+        
 
         &:hover {
             img{
                 opacity: 1;
+                
             }
         }
     }
+
+
 }
+
+
 
 .nav-item {
     padding: 0rem .75rem;
+    
 }
 
 .navbar {
     min-height: 78px;
+    
+    
+    .logo-nav{
+        width: 185px;
+    }
 }
+
 
 .navbar-nav {
     img {
         height: 30px;
         opacity: .7;
         transition: all .3s ease;
+        
     }
     .nav-link.active  {
         color:var(--main-color)!important;
         img {
             opacity: 1;
         }
+    }
+}
+
+.nav-link{
+    color: rgba(0, 0, 0, 0.9)!important;
+    
+    &:hover {
+        color: #7a7a7a !important;
     }
 }
