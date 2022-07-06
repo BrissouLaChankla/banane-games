@@ -73,7 +73,7 @@
         <div class="d-flex flex-column flex-lg-row justify-content-center mt-4 mt-lg-7">
             <a href="{{ route('show-mentions') }}" class="mb-3 mb-lg-0 mx-lg-3 fw-bold">Mentions légales</a>
             <a href="{{ route('show-chartes') }}" class="mb-3 mb-lg-0 mx-lg-3 fw-bold">Chartes des cookies</a>
-            <a href="{{ route('show-cvgcvu') }}" class="mb-3 mb-lg-0 mx-lg-3 fw-bold">CGV / CGU</a>
+            <a href="{{ route('show-cgv') }}" class="mb-3 mb-lg-0 mx-lg-3 fw-bold">CGV / CGU</a>
         </div>
 
 

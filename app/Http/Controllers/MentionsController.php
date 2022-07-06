@@ -15,7 +15,7 @@ class MentionsController extends Controller
         return view('mentions-legales.chartes');
     }
 
-    public function showCvgCvu() {
+    public function showCgv() {
     return view('mentions-legales.cgv');
     }
 }
