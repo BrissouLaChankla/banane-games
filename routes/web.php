@@ -106,7 +106,7 @@ Route::get('/a-propos', [AboutController::class, 'showAbout'])->name('show-about
 Route::controller(MentionsController::class)->group(function () {
     Route::get('/mentions-legales', 'showMentions')->name('show-mentions');
     Route::get('/chartes-des-cookies', 'showChartes')->name('show-chartes');
-    Route::get('/cvg-cvu', 'showCgv')->name('show-cvg');
+    Route::get('/conditions-generales', 'showCgv')->name('show-cgv');
 
 });
 
