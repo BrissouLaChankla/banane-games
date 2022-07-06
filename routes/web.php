@@ -53,6 +53,9 @@ Route::prefix('admin')->middleware('auth')->group(function () {
         Route::post('/create', 'postEditCreateArticle')->name('post-edit-create-article');
 
         Route::delete('/delete/{id}', 'deleteArticle')->name('delete-article');
+
+        Route::post('/fav/{action}/{id}', 'editArticleFav')->name('edit-article-fav');
+
     });
 
     
@@ -63,8 +66,9 @@ Route::prefix('admin')->middleware('auth')->group(function () {
         Route::get('/all', 'showAll')->name('show-all-games');
 
         Route::post('/create', 'postEditCreateGame')->name('post-edit-create-game');
-
         Route::delete('/delete/{id}', 'deleteGame')->name('delete-game');
+
+        Route::delete('/delete/screen/{id}', 'deleteScreen')->name('delete-screen');
     });
 
     Route::prefix('modules')->group(function() {
@@ -81,8 +85,6 @@ Route::prefix('admin')->middleware('auth')->group(function () {
     
         Route::get('/show-admins', [AdminController::class, 'showAdmins'])->name('show-admins');
         Route::delete('delete/{id}', [AdminController::class, 'deleteAdmin'])->name('delete-admin');
-        // Route::delete('/delete/{id}', 'deleteAdmin')->name('delete-admin');
-      
 
 });
 
@@ -101,9 +103,12 @@ Route::get('/a-propos', [AboutController::class, 'showAbout'])->name('show-about
 
 // MENTIONS G
 
-Route::get('/mentions-legales', [MentionsController::class, 'showMentions'])->name('show-mentions');
-Route::get('/chartes-des-cookies', [MentionsController::class, 'showChartes'])->name('show-chartes');
-Route::get('/cvg-cvu', [MentionsController::class, 'showCvgCvu'])->name('show-cvgcvu');
+Route::controller(MentionsController::class)->group(function () {
+    Route::get('/mentions-legales', 'showMentions')->name('show-mentions');
+    Route::get('/chartes-des-cookies', 'showChartes')->name('show-chartes');
+    Route::get('/cvg-cvu', 'showCgv')->name('show-cvg');
+
+});
 
 
 

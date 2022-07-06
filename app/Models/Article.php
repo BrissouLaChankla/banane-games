@@ -16,9 +16,10 @@ class Article extends Model
         'description',
         'slug',
         'is_published',
+        'is_fav',
         'content',
         'thumbnail_img_url',
-        'header_img_url'
+        'header_img_url',
     ];
 
 }

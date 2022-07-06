@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-md-7 position-relative">
-                <img class="top-left-pop" src="{{asset('img/decorations/left-corner-pop.webp')}}" alt="Image pop effect">
+                <img class="top-left-pop  animate__animated wow animate__fadeInUp" src="{{asset('img/decorations/left-corner-pop.webp')}}" alt="Image pop effect">
                 <div class="text-lg-start text-center">
                 <h2 class="text-primary mb-4 ">On t’a déja parlé de <x-underlined word="Nanaba"/> ?</h2>
                 </div>

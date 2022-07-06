@@ -1,11 +1,16 @@
 @extends('layouts.app')
-
+@section('metas')
+    <x-meta
+        title="Meta Title à faire "
+        description="Meta-description à faire"
+    />
+@endsection
 @section('content')
     <h1 class="text-primary text-center mt-7 mt-sm-10 mb-7">À propos de Nanaba</h1>
     <div class="container">
         <div class="row">
             <div class="col-lg-6 bg-boss position-relative">
-                <img src="{{ asset('img/mister-nanaba/mister-nanaba-heureux.webp') }}" class="d-none d-lg-block nanaba-top-left"
+                <img src="{{ asset('img/mister-nanaba/mister-nanaba-heureux.webp') }}" class="d-none d-lg-block nanaba-top-left "
                     alt="Mister Nanaba Heureux">
                     <div class="position-relative">
                         <img src="{{ asset('img/members/Nanagames_OlivierGuerin_ALMonier.webp') }}" style="max-height: 404px;" class="fit-cover w-100"
@@ -28,11 +33,11 @@
             </div>
             <div class="col-lg-6">
                 <div>
-                    <div class="text-nowrap text-center text-lg-start">
+                    <div class="text-nowrap ">
                         <h2 class="d-inline-block ">Tout savoir <br>sur l'application</h2>
                         <span class="h2 position-relative ms-1 ">Nanaba
-                            <img class="right-corner-pop d-none d-sm-block" loading="lazy" src="{{ asset('img/decorations/right-corner-pop.webp') }}"
-                                alt="">
+                            <img class="right-corner-pop d-none d-sm-block animate__animated wow animate__fadeInLeft" loading="lazy" src="{{ asset('img/decorations/right-corner-pop.webp') }}"
+                                alt="decoration">
                         </span>
                     </div>
                     <p class="p-big">Nanaba est une application qui allie gestion du temps d’écran et éducation.
@@ -79,20 +84,20 @@
         </div>
         <div class="text-center position-relative mt-7">
             <img src="{{ asset('img/decorations/arrow-bottom-right.webp')}}" loading="lazy"
-                class="d-none d-lg-inline-block arrow-bottom-right" alt="">
+                class="d-none d-lg-inline-block arrow-bottom-right animate__animated wow animate__fadeInLeft" alt="decoration">
             <x-button name="En savoir plus !" color="primary" />
         </div>
         <h2 class="text-center text-primary mt-7 mt-sm-10 mb-7 text-center text-lg-start">À propos de Nanagames</h2>
         <div class="row">
             <div class="col-lg-6 bg-boss position-relative">
-                <img src="{{ asset('img/members/Nanagames_TeamTech.webp') }}" loading="lazy" style="max-height: 404px;" class="fit-cover w-100" alt="">
+                <img src="{{ asset('img/members/Nanagames_TeamTech.webp') }}" loading="lazy" style="max-height: 404px;" class="fit-cover w-100" alt="Photo de l'équipe Nanagames">
             </div>
             <div class="col-lg-6">
                 <div class="ps-lg-5 ">
                         <span class="position-relative">
                             <div class="text-lg-start text-center">
                             <h3 class="d-inline-block mb-4 mt-7 mt-lg-0 ">Une équipe jeune et dynamique</h3></div>
-                            <img src="{{asset('img/decorations/top-left-swoosh.webp')}}" class="top-left-swoosh d-none d-xl-block" alt="">
+                            <img src="{{asset('img/decorations/top-left-swoosh.webp')}}" class="top-left-swoosh d-none d-xl-block animate__animated wow animate__fadeInUp" alt="decoration">
                         </span>
                         <p class="p-big">Nanaba est une startup de edtech niçoise à impact. Fondée en janvier 2021
                             par Anne Laure MONIER, une maman soucieuse de l’activité numérique de ses enfants et Olivier
@@ -110,12 +115,12 @@
                 </p>
             </div>
             <div id="team" class="mt-7 position-relative">
-                <img class="right-corner-pop d-none d-lg-block img-fluid" loading="lazy" src="{{ asset('img/decorations/right-corner-pop.webp') }}" alt="">
-                <img src="{{ asset('img/decorations/zigzag-bottom-left.webp') }}" loading="lazy" class="zigzag-bottom-left d-none d-lg-block img-fluid"
+                <img class="right-corner-pop d-none d-lg-block animate__animated wow animate__fadeInUp" loading="lazy" src="{{ asset('img/decorations/right-corner-pop.webp') }}" alt="decoration">
+                <img src="{{ asset('img/decorations/zigzag-bottom-left.webp') }}" loading="lazy" class="zigzag-bottom-left d-none d-lg-block animate__animated wow animate__fadeInDown"
                     alt="Decoration zig zag">
                 @include('sections.teamcarousel')
             </div>
-            <div id="concept" class="mt-11 mb-10 row">
+            <div id="concept" class="mt-11 row">
                 <div class="col-lg-6 ">
                     
                     <h2 class="text-lg-start text-center">Pourquoi ce
@@ -125,7 +130,7 @@
                         Nanaba est une application qui allie gestion du temps d’écran et éducation.
                     </p>
                     
-                    <img src="{{ asset('img/mister-nanaba/mister-nanaba-laptop.webp') }}" loading="lazy" alt=""
+                    <img src="{{ asset('img/mister-nanaba/mister-nanaba-laptop.webp') }}" loading="lazy" alt="Mister Nanaba tient un pc"
                         class="mister-nanaba-laptop img-fluid mt-7 pb-6" style="width:100%;">
                 </div>
                 <div class="col-lg-6 position-relative">
@@ -133,7 +138,7 @@
                     <div class="d-flex flex-column h-100 justify-content-between">
                         @for ($i = 0; $i < 4; $i++)
                             <div class="d-flex align-items-center my-4 my-lg-0">
-                                <span class="material-symbols-rounded tick">
+                                <span class="material-symbols-rounded tick animate__animated wow animate__flipInX " data-wow-delay="0.{{$i}}s">
                                     done
                                 </span>
                                 <p class="p-big ps-4">

@@ -37,13 +37,22 @@
 
 {!! Form::label('img_attached[]', 'Screens du jeu', ['class' => 'form-label']) !!}
 {!! Form::file('img_attached[]', ['class' => 'form-control', 'multiple']) !!}
-<div class="row justify-content-center">
-    @foreach ($game->pictures as $picture)
-        <div class="col-md-3">
-            <img src="{{ asset($picture->img_url) }}"class=" img-fluid" alt="">
-        </div>
-    @endforeach
+@isset($game)
+    <div class="row justify-content-center mt-5">
+        @foreach ($game->pictures as $index->$picture)
+            <div class="col-md-3">
+                <div class="position-relative">
+                    <img src="{{ asset($picture->img_url) }}"class=" img-fluid" >
+                    <div class="btn btn-danger btn-sm del-screen shadow-sm" onclick="deleteScreen({{$picture->id}})">
+                        <span class="material-symbols-rounded mt-1  ">
+                            delete
+                        </span>
+                    </div>
+                </div>
+            </div>
+        @endforeach
     </div>
+@endisset
 
 
 
@@ -89,6 +98,34 @@
     function clearImage() {
         document.getElementById('img_url').value = null;
         frame.src = "";
+    }
+
+
+    function deleteScreen(id) {
+        const token = '{{ csrf_token() }}';
+                Swal.fire({
+                    title: 'Êtes-vous sûr ?',
+                    text: "Vous êtes sur le point de supprimer une image",
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Oui, supprimer.'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                         fetch('/admin/games/delete/screen/'+id, {
+                            headers: {
+                                'Content-Type': 'application/json',
+                                "X-CSRF-Token": token
+                            },
+                            method: 'DELETE',
+                        }).then(function(response) {
+                            window.location.reload()
+                        }) .catch(function(err) {
+                            console.log(err)
+                        });
+                    }
+                })
     }
 </script>
 @endpush

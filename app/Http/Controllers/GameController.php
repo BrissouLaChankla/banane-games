@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Game;
+use App\Models\GamePicture;
 use Validator;
 use Illuminate\Support\Str;
 use Intervention\Image\Facades\Image;
@@ -49,18 +50,10 @@ class GameController extends Controller
     }
 
     public function postEditCreateGame(Request $request) {
-
-        // if($request->hasFile('img_attached')){
-        //     foreach($request->img_attached) {
-                
-        //     }
-        // }
-        // 
-        dd("Ici qu'il faut gérer les screens du jeu");
-        
         $validator = Validator::make($request->all(), [
             'img_url' => 'image|mimes:jpeg,png,jpg,gif,webp',
             'title' => 'required|string|min:3|max:255',
+            'matiere' => 'required|string|min:3|max:255',
             'short_description' => 'required|string|min:3|max:255',
             'link' => 'required|string|min:3|max:255',
             'description' => 'required|string|min:3'
@@ -79,6 +72,11 @@ class GameController extends Controller
         } else {
             $request->merge(['is_available' => 0]);
         }
+
+
+       
+        }
+        
         
         // Détect si une image a été upload 
         if($request->hasFile('img_url')){
@@ -104,9 +102,43 @@ class GameController extends Controller
         } else {
             $game = Game::create($request->all());
         }
+
+         // Détect si un ou des screens ont été upload 
+         if($request->hasFile('img_attached')){
+            foreach($request->img_attached as $screen) {
+
+                $nameScreen = "Screen-".Str::slug($request->matiere, '-')."_".uniqid().".webp";
+                $destinationPath = public_path('img/games/screens/'.$nameScreen);
+                
+                // = Create the Image Object
+                $image = Image::make($screen);
+            
+                // Crop and save 
+                $image->resize(1400, 1000, function ($constraint) {
+                    $constraint->aspectRatio();
+                })->encode('webp', 100)->save($destinationPath);
+    
+                $gamePicture = GamePicture::create([
+                    "img_url" => 'img/games/screens/'.$nameScreen,
+                    "game_id" => $game->id,
+                ]);
+
+            }
+
         
+        }
         return redirect()->route('show-all-games');
-    }
+}
+
+public function deleteScreen($id) {
+    $screen = GamePicture::find($id);
+
+    if(\File::exists(public_path($screen->img_url))){
+        \File::delete(public_path($screen->img_url));
+        }else{
+            dd('Image introuvable, contactez l\'admin !');
+        }
+    $screen->delete();
 }
     
 

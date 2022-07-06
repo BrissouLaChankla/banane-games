@@ -1,7 +1,7 @@
 <div id="triptique" class="my-10">
     <div class="container">
         <div class="text-lg-center mb-5">
-            <h2 class="text-primary text-lg-start text-center">Pourquoi tu vas adorer apprendre avec Nanagames</h2>
+            <h2 class="text-primary text-center">Pourquoi tu vas adorer apprendre avec Nanagames</h2>
             <p class="mt-4 mb-7 subtext text-lg-center text-sm-start">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, similique perspiciatis consequuntur,
                 tempore dolorum amet blanditiis iste placeat earum beatae ipsa eos fugiat quam aliquam perferendis

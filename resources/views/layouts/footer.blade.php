@@ -1,12 +1,12 @@
 <footer id="footer" class="py-5 bg-primary text-white mt-10 text-lg-start">
-    <div class="container-lg px-5 px-lg-0">
+    <div class="container px-5 px-lg-0">
         <span class="nanagames text-secondary font-title">Nanagames</span>
         <div class="row mt-3 mt-lg-8">
             <div class="col-lg-3">
                 <div class="mb-4">
                     <h3 class="mb-lg-5 mb-2 h4">Découvrez-nous</h3>
                     <div class="d-flex flex-column align-items-start">
-                        <a href="#">Nanaba</a>
+                        <a href="https://nanaba.tech/" target="_blank">Nanaba</a>
                     </div>
                 </div>
             </div>
@@ -15,8 +15,8 @@
                 <div class="mb-4">
                     <h3 class="mb-lg-5 mb-2 h4">Contact</h3>
                     <div class="d-flex flex-column align-items-start">
-                        <a href="#">Nous contacter</a>
-                        <a href="#">Nous rejoindre</a>
+                        <a href="{{ route('show-contact')}}">Nous contacter</a>
+                        <a href="https://nanaba.tech/recrutement/" target="_blank">Nous rejoindre</a>
                     </div>
                 </div>
             </div>
