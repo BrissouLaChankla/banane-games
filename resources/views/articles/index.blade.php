@@ -1,4 +1,11 @@
 @extends('layouts.app')
+@section('metas')
+    <x-meta
+        title="Nanagames - {{$article->title}}"
+        description="{{$article->description}}"
+        image="{{asset($article->header_img_url)}}"
+    />
+@endsection
 @section('content')
 
     <div class="container pt-7">

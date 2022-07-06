@@ -20,7 +20,6 @@ class Article extends Model
         'content',
         'thumbnail_img_url',
         'header_img_url',
-
     ];
 
 }

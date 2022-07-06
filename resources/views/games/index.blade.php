@@ -1,4 +1,11 @@
 @extends('layouts.app')
+@section('metas')
+    <x-meta
+        title="{{$game->title}} - Jeu de {{$game->matiere}} pour Nanagames"
+        description="{{$game->short_description}}"
+        image="{{asset($game->thumbnail_img_url)}}"
+    />
+@endsection
 @section('content')
     <header class="bg-lighter header-game py-4">
         <div class="container">

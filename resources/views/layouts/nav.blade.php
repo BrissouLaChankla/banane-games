@@ -1,8 +1,7 @@
 <nav class="navbar navbar-expand-lg bg-white shadow-sm fixed-top py-3">
     <div class="container">
         <a class="navbar-brand" href="{{ url('/') }}">
-            {{-- {{ config('app.name', 'Laravel') }} --}}
-            <img src="{{ asset('img/navbar/nav_nanagames.webp') }}" class="logo-nav" alt="Logo Nanagames">
+            <img src="{{ asset('img/logo_nanagames.webp') }}" class="logo-nav" width="185" height="41" alt="Logo Nanagames">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -24,10 +23,10 @@
                         data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                         {{-- Pas réussi à variabiliser URL, à retenter --}}
                         @if (Route::is('show-game'))
-                            <img src="{{ asset('img/navbar/games_colored.webp') }}" class="me-1"
+                            <img src="{{ asset('img/navbar/games_colored.webp') }}" width="30" height="30" class="me-1"
                                 alt="Icone section Jeu | Nanagames">
                         @else
-                            <img src="{{ asset('img/navbar/games.webp') }}" class="me-1"
+                            <img src="{{ asset('img/navbar/games.webp') }}" width="30" height="30" class="me-1"
                                 alt="Icone section Jeu | Nanagames">
                         @endif
                         Les jeux
@@ -47,10 +46,10 @@
                         href="{{ route('show-about') }}">
                         {{-- Pas réussi à variabiliser URL, à retenter --}}
                         @if (Route::is('show-about'))
-                            <img src="{{ asset('img/navbar/about_colored.webp') }}" class="me-1"
+                            <img src="{{ asset('img/navbar/about_colored.webp') }}" width="30" height="30" class="me-1"
                                 alt="Icone section About | Nanagames">
                         @else
-                            <img src="{{ asset('img/navbar/about.webp') }}" class="me-1"
+                            <img src="{{ asset('img/navbar/about.webp') }}" width="30" height="30" class="me-1"
                                 alt="Icone section About | Nanagames">
                         @endif
                         A propos
@@ -62,10 +61,10 @@
                         href="{{ route('show-blog') }}">
                         {{-- Pas réussi à variabiliser URL, à retenter --}}
                         @if (Route::is('show-blog'))
-                            <img src="{{ asset('img/navbar/news_colored.webp') }}" class="me-1"
+                            <img src="{{ asset('img/navbar/news_colored.webp') }}" width="30" height="30" class="me-1"
                                 alt="Icone section Blog | Nanagames">
                         @else
-                            <img src="{{ asset('img/navbar/news.webp') }}" class="me-1"
+                            <img src="{{ asset('img/navbar/news.webp') }}" width="30" height="30" class="me-1"
                                 alt="Icone section Blog | Nanagames">
                         @endif
 
@@ -77,10 +76,10 @@
                         href="{{ route('show-contact') }}">
                         {{-- Pas réussi à variabiliser URL, à retenter --}}
                         @if (Route::is('show-contact'))
-                            <img src="{{ asset('img/navbar/contact_colored.webp') }}" class="me-1"
+                            <img src="{{ asset('img/navbar/contact_colored.webp') }}" width="30" height="30" class="me-1"
                                 alt="Icone section Contact | Nanagames">
                         @else
-                            <img src="{{ asset('img/navbar/contact.webp') }}" class="me-1"
+                            <img src="{{ asset('img/navbar/contact.webp') }}" width="30" height="30" class="me-1"
                                 alt="Icone section Contact | Nanagames">
                         @endif
                         Contact

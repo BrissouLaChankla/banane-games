@@ -1,6 +1,16 @@
+
 @extends('layouts.app')
 
+@section('metas')
+<x-meta
+	title="Nanagames - Plateforme de jeux éducatifs 100% gratuits"
+	description="Nanagames est une plateforme de jeux ludo-éducatifs gratuits pour s'améliorer à l'école. Elle est fait pour ceux qui veulent apprendre tout en s'amusant."
+/>
+@endsection
+
 @section('content')
+
+
     <div id="hero" class="bg-lighter py-10">
         <div class="container">
             <div class="row align-items-center">
@@ -29,7 +39,7 @@
                     </div>
                 </div>
                 <div class="col-lg-6 mt-8 mt-lg-0 px-8 ps-lg-10 pe-lg-0">
-                    <img src="{{ asset('img/games/thumb/geoguessr.webp') }}" class="img-fluid hero-img"
+                    <img src="{{ asset('img/games/thumb/geoguessr.webp') }}" width="504" height="518" class="img-fluid hero-img"
                         alt="Image du jeu Nanagames à la une">
                 </div>
             </div>
@@ -42,18 +52,6 @@
     </div>
     @include('sections.triptique')
     @include('sections.nanabanner')
-
-
-
     @include('sections.lastarticles')
 
-    @push('scripts')
-        <script defer>
-            window.wow = new WOW.WOW({
-                live: false
-            });
-
-            window.wow.init();
-        </script>
-    @endpush
 @endsection

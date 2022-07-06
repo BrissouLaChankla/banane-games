@@ -39,10 +39,10 @@
 {!! Form::file('img_attached[]', ['class' => 'form-control', 'multiple']) !!}
 @isset($game)
     <div class="row justify-content-center mt-5">
-        @foreach ($game->pictures as $picture)
+        @foreach ($game->pictures as $index->$picture)
             <div class="col-md-3">
                 <div class="position-relative">
-                    <img src="{{ asset($picture->img_url) }}"class=" img-fluid" alt="">
+                    <img src="{{ asset($picture->img_url) }}"class=" img-fluid" >
                     <div class="btn btn-danger btn-sm del-screen shadow-sm" onclick="deleteScreen({{$picture->id}})">
                         <span class="material-symbols-rounded mt-1  ">
                             delete

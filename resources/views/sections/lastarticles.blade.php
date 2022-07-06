@@ -7,7 +7,7 @@
                     <li class="splide__slide">
                         <article class="card rounded border-0 shadow-sm carousel-card">
                             <img src="{{asset($article->thumbnail_img_url)}}"
-                                class="card-img-top object-fit" loading="lazy" alt="" style="height:200px ;">
+                                class="card-img-top object-fit" loading="lazy" alt="Image de l'article {{$article->title}}" style="height:200px ;">
                             <div class="p-4">
                                 @isset($article->updated_at)
                                     <div class="d-flex fw-bold justify-content-star">

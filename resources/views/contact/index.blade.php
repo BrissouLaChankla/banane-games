@@ -1,4 +1,12 @@
 @extends('layouts.app')
+
+@section('metas')
+    <x-meta
+        title="Meta Title à faire "
+        description="Meta-description à faire"
+    />
+@endsection
+
 @section('content')
     <div id="contact" class="d-flex align-items-center pt-10">
         <div class="container">
@@ -89,8 +97,8 @@
                 </div>
                 <div class="col-xl-6">
                     <div class="position-relative d-flex justify-content-center pt-6">
-                        <img src="{{asset('img/decorations/big-arrow-top-left.webp')}}" class="d-none d-xl-block big-arrow-top-left" alt="">
-                        <img src="{{ asset('img/mister-nanaba/mister-nanaba-contact.webp') }}" class="w-100" style="max-width:480px" alt="">
+                        <img src="{{asset('img/decorations/big-arrow-top-left.webp')}}" class="d-none d-xl-block big-arrow-top-left" alt="Flêche">
+                        <img src="{{ asset('img/mister-nanaba/mister-nanaba-contact.webp') }}" class="w-100" style="max-width:480px" alt="Mister Nanaba contact">
                     </div>
                 </div>
             </div>

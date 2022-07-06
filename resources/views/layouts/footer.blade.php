@@ -6,7 +6,7 @@
                 <div class="mb-4">
                     <h3 class="mb-lg-5 mb-2 h4">Découvrez-nous</h3>
                     <div class="d-flex flex-column align-items-start">
-                        <a href="#">Nanaba</a>
+                        <a href="https://nanaba.tech/" target="_blank">Nanaba</a>
                     </div>
                 </div>
             </div>
@@ -15,8 +15,8 @@
                 <div class="mb-4">
                     <h3 class="mb-lg-5 mb-2 h4">Contact</h3>
                     <div class="d-flex flex-column align-items-start">
-                        <a href="#">Nous contacter</a>
-                        <a href="#">Nous rejoindre</a>
+                        <a href="{{ route('show-contact')}}">Nous contacter</a>
+                        <a href="https://nanaba.tech/recrutement/" target="_blank">Nous rejoindre</a>
                     </div>
                 </div>
             </div>
