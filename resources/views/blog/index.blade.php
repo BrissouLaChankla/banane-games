@@ -1,4 +1,12 @@
 @extends('layouts.app')
+
+@section('metas')
+    <x-meta
+        title="Meta Title à faire "
+        description="Meta-description à faire"
+    />
+@endsection
+
 @section('content')
 
     <div class="container">

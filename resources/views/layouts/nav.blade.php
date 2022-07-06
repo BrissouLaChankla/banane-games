@@ -1,7 +1,6 @@
 <nav class="navbar navbar-expand-lg bg-white shadow-sm fixed-top py-3">
     <div class="container">
         <a class="navbar-brand" href="{{ url('/') }}">
-            {{-- {{ config('app.name', 'Laravel') }} --}}
             <img src="{{ asset('img/logo_nanagames.webp') }}" class="logo-nav" width="185" height="41" alt="Logo Nanagames">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"

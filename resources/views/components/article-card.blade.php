@@ -1,5 +1,5 @@
 <article class="card rounded border-0 shadow">
-    <img src="{{asset($article->header_img_url)}}" class="card-img-top object-fit" alt="" style="height:200px ;">
+    <img src="{{asset($article->header_img_url)}}" class="card-img-top object-fit" alt="Image de l'article {{$article->title}}" style="height:200px ;">
 
     <div class="p-4">
         @isset($article->updated_at)

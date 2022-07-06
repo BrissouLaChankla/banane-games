@@ -8,14 +8,14 @@ use Illuminate\Http\Request;
 class MentionsController extends Controller
 {
     public function showMentions() {
-        return view('mentions-legales.mentions.index');
+        return view('mentions-legales.mentions');
     }
 
     public function showChartes() {
-        return view('mentions-legales.chartes.index');
+        return view('mentions-legales.chartes');
     }
 
     public function showCvgCvu() {
-    return view('mentions-legales.cvg-cvu.index');
+    return view('mentions-legales.cgv');
     }
 }

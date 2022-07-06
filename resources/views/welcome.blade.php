@@ -1,6 +1,16 @@
+
 @extends('layouts.app')
 
+@section('metas')
+<x-meta
+	title="Nanagames - Plateforme de jeux éducatifs 100% gratuits"
+	description="Nanagames est une plateforme de jeux ludo-éducatifs gratuits pour s'améliorer à l'école. Elle est fait pour ceux qui veulent apprendre tout en s'amusant."
+/>
+@endsection
+
 @section('content')
+
+
     <div id="hero" class="bg-lighter py-10">
         <div class="container">
             <div class="row align-items-center">
@@ -42,18 +52,6 @@
     </div>
     @include('sections.triptique')
     @include('sections.nanabanner')
-
-
-
     @include('sections.lastarticles')
 
-    @push('scripts')
-        <script defer>
-            window.wow = new WOW.WOW({
-                live: false
-            });
-
-            window.wow.init();
-        </script>
-    @endpush
 @endsection
