@@ -39,7 +39,7 @@
 {!! Form::file('img_attached[]', ['class' => 'form-control', 'multiple']) !!}
 @isset($game)
     <div class="row justify-content-center mt-5">
-        @foreach ($game->pictures as $index->$picture)
+        @foreach ($game->pictures as $picture)
             <div class="col-md-3">
                 <div class="position-relative">
                     <img src="{{ asset($picture->img_url) }}"class=" img-fluid" >
