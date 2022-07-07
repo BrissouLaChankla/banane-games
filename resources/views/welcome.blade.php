@@ -31,7 +31,7 @@
                     <div class="text-lg-start text-center">
                         <div class="d-inline-block position-relative ">
                             <a href="{{ URL::to('/') }}#games">
-                                <x-button name="Jouer à Geoguessr !" color="primary" />
+                                <x-button name="Jouer à GeoExplorer !" color="primary" />
                             </a>
                             <img src="{{ asset('img/decorations/arrow-top-left.webp') }}"
                                 class="top-left-arrow d-none d-lg-block animate__animated animate__fadeInRight" alt="Image arrow top left">

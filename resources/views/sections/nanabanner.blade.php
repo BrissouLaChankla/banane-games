@@ -10,7 +10,7 @@
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, praesentium cupiditate sint ipsum quasi earum deleniti alias voluptate autem excepturi maiores obcaecati vel vero non! Veritatis quas voluptatem alias cupiditate.
                 </p>
                 <div class="text-lg-start text-center">
-                    <a href="https://nanaba.tech" target="_blank" >
+                    <a href="https://nanaba.tech/nos-applications/application-nanaba/" target="_blank" >
                         <x-button name="Découvrir l'app" color="primary" />
                     </a>
                 </div>

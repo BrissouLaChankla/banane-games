@@ -85,7 +85,9 @@
         <div class="text-center position-relative mt-7">
             <img src="{{ asset('img/decorations/arrow-bottom-right.webp')}}" loading="lazy"
                 class="d-none d-lg-inline-block arrow-bottom-right animate__animated wow animate__fadeInLeft" alt="decoration">
-            <x-button name="En savoir plus !" color="primary" />
+                <a href="https://nanaba.tech/nos-applications/application-nanaba/" target="_blank">
+                    <x-button name="En savoir plus !" color="primary" />
+                </a>
         </div>
         <h2 class="text-center text-primary mt-7 mt-sm-10 mb-7 text-center text-lg-start">À propos de Nanagames</h2>
         <div class="row">
