@@ -1,4 +1,4 @@
-<div class="container pt-8">
+<div class="container px-8 pt-8">
     <h2 class="text-primary text-center mb-7">Les derniers articles</h2>
     <div class="splide outside_arrows" role="group">
         <div class="splide__track">

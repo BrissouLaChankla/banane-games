@@ -16,7 +16,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-6 position-relative">
 
-                    <img class="top-left-pop animate__animated animate__fadeInDown"
+                    <img class="top-left-pop animate__animated animate__fadeInDown d-none d-lg-block"
                         src="{{ asset('img/decorations/left-corner-pop.webp') }}" alt="Image pop effect">
                     <h1 class="text-primary text-lg-start text-center">Des jeux totalement gratuits qui vous font rester
                         smart !</h1>
@@ -30,7 +30,7 @@
                     </p>
                     <div class="text-lg-start text-center">
                         <div class="d-inline-block position-relative ">
-                            <a href="{{ URL::to('/') }}#games">
+                            <a href="https://geoexplorer.nanagames.io">
                                 <x-button name="Jouer à GeoExplorer !" color="primary" />
                             </a>
                             <img src="{{ asset('img/decorations/arrow-top-left.webp') }}"

@@ -21,7 +21,7 @@
     </div>
     <div class="col-lg-4 px-10 my-lg-5 mt-5">
         
-        <img src="{{ asset('img/designs/trophee.webp') }}" class="img-fluid w-100" alt="Image trophée">
+        <img src="{{ asset('img/designs/trophee.webp') }}" class="d-none d-lg-block img-fluid w-100" alt="trophée">
     
     </div>
 </div>
