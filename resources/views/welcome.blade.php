@@ -30,7 +30,7 @@
                     </p>
                     <div class="text-lg-start text-center">
                         <div class="d-inline-block position-relative ">
-                            <a href="https://geoexplorer.nanagames.io">
+                            <a href="https://geoexplorer.nanagames.io" target="_blank">
                                 <x-button name="Jouer à GeoExplorer !" color="primary" />
                             </a>
                             <img src="{{ asset('img/decorations/arrow-top-left.webp') }}"
