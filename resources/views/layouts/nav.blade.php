@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top py-3">
     <div class="container">
         <a class="navbar-brand" href="{{ url('/') }}">
-            <img src="{{ asset('img/logo_nanagames.webp') }}" class="logo-nav" width="185" height="41" alt="Logo Nanagames">
+            <img src="{{ asset('img/logo_nanagames.webp') }}" class="logo-nav" width="185" height="41" alt="Logo BananeGames">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -24,10 +24,10 @@
                         {{-- Pas réussi à variabiliser URL, à retenter --}}
                         @if (Route::is('show-game'))
                             <img src="{{ asset('img/navbar/games_colored.webp') }}" width="30" height="30" class="me-1"
-                                alt="Icone section Jeu | Nanagames">
+                                alt="Icone section Jeu | BananeGames">
                         @else
                             <img src="{{ asset('img/navbar/games.webp') }}" width="30" height="30" class="me-1"
-                                alt="Icone section Jeu | Nanagames">
+                                alt="Icone section Jeu | BananeGames">
                         @endif
                         Les jeux
                     </a>
@@ -47,10 +47,10 @@
                         {{-- Pas réussi à variabiliser URL, à retenter --}}
                         @if (Route::is('show-about'))
                             <img src="{{ asset('img/navbar/about_colored.webp') }}" width="30" height="30" class="me-1"
-                                alt="Icone section About | Nanagames">
+                                alt="Icone section About | BananeGames">
                         @else
                             <img src="{{ asset('img/navbar/about.webp') }}" width="30" height="30" class="me-1"
-                                alt="Icone section About | Nanagames">
+                                alt="Icone section About | BananeGames">
                         @endif
                         A propos
                     </a>
@@ -62,10 +62,10 @@
                         {{-- Pas réussi à variabiliser URL, à retenter --}}
                         @if (Route::is('show-blog'))
                             <img src="{{ asset('img/navbar/news_colored.webp') }}" width="30" height="30" class="me-1"
-                                alt="Icone section Blog | Nanagames">
+                                alt="Icone section Blog | BananeGames">
                         @else
                             <img src="{{ asset('img/navbar/news.webp') }}" width="30" height="30" class="me-1"
-                                alt="Icone section Blog | Nanagames">
+                                alt="Icone section Blog | BananeGames">
                         @endif
 
                         Actualités
@@ -77,10 +77,10 @@
                         {{-- Pas réussi à variabiliser URL, à retenter --}}
                         @if (Route::is('show-contact'))
                             <img src="{{ asset('img/navbar/contact_colored.webp') }}" width="30" height="30" class="me-1"
-                                alt="Icone section Contact | Nanagames">
+                                alt="Icone section Contact | BananeGames">
                         @else
                             <img src="{{ asset('img/navbar/contact.webp') }}" width="30" height="30" class="me-1"
-                                alt="Icone section Contact | Nanagames">
+                                alt="Icone section Contact | BananeGames">
                         @endif
                         Contact
                     </a>

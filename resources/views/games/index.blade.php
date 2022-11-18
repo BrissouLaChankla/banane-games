@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('metas')
     <x-meta
-        title="{{$game->title}} - Jeu de {{$game->matiere}} pour Nanagames"
+        title="{{$game->title}} - Jeu de {{$game->matiere}} pour BananeGames"
         description="{{$game->short_description}}"
         image="{{asset($game->thumbnail_img_url)}}"
     />
@@ -65,7 +65,7 @@
         <h2 class="text-lg-start text-center">
             <x-underlined word="Classement" />
         </h2>
-        <p class="p-big py-4">Nanaba est une application qui allie gestion du temps d’écran et éducation.</p>
+        <p class="p-big py-4">BananeApp est une application qui allie gestion du temps d’écran et éducation.</p>
         @include('sections.ranking')
     </div>
 

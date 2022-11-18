@@ -49,7 +49,7 @@ class ContactController extends Controller
             }
 
 
-            Mail::to("hello@nanagames.io")->send(new \App\Mail\ContactMail($mailData));
+            Mail::to("brice-eliasse@gmail.com")->send(new \App\Mail\ContactMail($mailData));
 
             return  redirect(url()->previous())->with('contact-success', 'Nous avons bien reçu votre formulaire 👌 On revient vers vous dés que possible');
         }

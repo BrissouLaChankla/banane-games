@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('metas')
     <x-meta
-        title="Nanagames - {{$article->title}}"
+        title="BananeGames - {{$article->title}}"
         description="{{$article->description}}"
         image="{{asset($article->header_img_url)}}"
     />
@@ -28,15 +28,15 @@
                 </div>
             @endisset
             <div class="rs-icons mt-3 mt-lg-0">
-                <a href="https://www.facebook.com/nanabaofficiel/" class="ms-2 hvr-grow"><img
+                <a href="#" class="ms-2 hvr-grow"><img
                     src="{{ asset('img/footer/akar-icons-facebook-fill.svg') }}" alt="Icon facebook"></a>
-            <a href="https://www.instagram.com/nanabaofficiel/?hl=fr" class="ms-2 hvr-grow"><img
+            <a href="#" class="ms-2 hvr-grow"><img
                     src="{{ asset('img/footer/akar-icons-instagram-fill.svg') }}" alt="Icon Instagram"></a>
-            <a href="https://twitter.com/nanabaofficiel" class="ms-2 hvr-grow"><img
+            <a href="#" class="ms-2 hvr-grow"><img
                     src="{{ asset('img/footer/akar-icons-twitter-fill.svg') }}" alt="Icon Twitter"></a>
-            <a href="https://www.linkedin.com/company/nanabaofficiel/mycompany/" class="ms-2 hvr-grow"><img
+            <a href="#" class="ms-2 hvr-grow"><img
                     src="{{ asset('img/footer/akar-icons-linkedin-fill.svg') }}" alt="Icon Linkdin"></a>
-            <a href="https://www.tiktok.com/@misternanaba" class="ms-2 hvr-grow"><img
+            <a href="#" class="ms-2 hvr-grow"><img
                     src="{{ asset('img/footer/bi-tiktok.svg') }}" alt="Icon Tiktok"></a>
             </div>
         </div>

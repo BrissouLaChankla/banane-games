@@ -1,9 +1,9 @@
 <div id="triptique" class="my-10">
     <div class="container">
         <div class="text-lg-center mb-5">
-            <h2 class="text-primary text-center">Pourquoi tu vas adorer apprendre avec Nanagames</h2>
+            <h2 class="text-primary text-center">Pourquoi tu vas adorer apprendre avec BananeGames</h2>
             <p class="mt-4 mb-7 subtext text-lg-center text-sm-start">
-               Utiliser Nanagames a tellement d'avantages qu'il est difficile d'en choisir une petite poignée... Mais vu que ça fait joli sur le site, on s'est démenés pour sélectionner les 4 suivants
+               Utiliser BananeGames a tellement d'avantages qu'il est difficile d'en choisir une petite poignée... Mais vu que ça fait joli sur le site, on s'est démenés pour sélectionner les 4 suivants
             </p>
         </div>
         <div class="row">
@@ -15,7 +15,7 @@
                     <div class="ps-3">
                         <h3 class="mb-1 mt-xs-3">Gratuit</h3>
                         <p>
-                            Pas besoin de faire chauffer les cartes bancaires pour profiter de nos Nanagames. C'est 100% gratuits, pour tous !
+                            Pas besoin de faire chauffer les cartes bancaires pour profiter de nos BananeGames. C'est 100% gratuits, pour tous !
                         </p>
                     </div>
                 </div>

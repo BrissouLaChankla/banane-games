@@ -16,7 +16,7 @@
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item me-2">
                     <a class="nav-link" href="{{ route('welcome') }}">
-                        Nanagames Front
+                        BananeGames Front
                     </a>
                 </li>
             

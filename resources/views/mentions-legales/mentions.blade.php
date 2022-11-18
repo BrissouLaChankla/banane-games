@@ -8,7 +8,7 @@
 @section('content')
 
     <div class="container">
-        <h1 class="text-primary text-center mt-10 mb-7">Mentions légales Nanagames
+        <h1 class="text-primary text-center mt-10 mb-7">Mentions légales BananeGames
         <h3 class="mb-4 mt-7 mt-lg-0">1. Oui oui </h3>
 
         <p class="p-big">

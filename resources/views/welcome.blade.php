@@ -3,8 +3,8 @@
 
 @section('metas')
 <x-meta
-	title="Nanagames - Plateforme de jeux éducatifs 100% gratuits"
-	description="Nanagames est une plateforme de jeux ludo-éducatifs gratuits pour s'améliorer à l'école. Elle est fait pour ceux qui veulent apprendre tout en s'amusant."
+	title="BananeGames - Plateforme de jeux éducatifs 100% gratuits"
+	description="BananeGames est une plateforme de jeux ludo-éducatifs gratuits pour s'améliorer à l'école. Elle est fait pour ceux qui veulent apprendre tout en s'amusant."
 />
 @endsection
 
@@ -22,7 +22,7 @@
                         smart !</h1>
                     <p class="text-muted mt-6 mb-5 ">
                         <strong>
-                            Nanagames
+                            BananeGames
                         </strong>
                         est une plateforme de jeux ludo-éducatifs gratuits pour s'améliorer à l'école. Elle est fait pour
                         ceux qui veulent apprendre tout en s'amusant.
@@ -30,7 +30,7 @@
                     </p>
                     <div class="text-lg-start text-center">
                         <div class="d-inline-block position-relative ">
-                            <a href="https://geoexplorer.nanagames.io" target="_blank">
+                            <a href="https://geoexplorer.brice-eliasse.com" target="_blank">
                                 <x-button name="Jouer à GeoExplorer !" color="primary" />
                             </a>
                             <img src="{{ asset('img/decorations/arrow-top-left.webp') }}"
@@ -40,7 +40,7 @@
                 </div>
                 <div class="col-lg-6 mt-8 mt-lg-0 px-8 ps-lg-10 pe-lg-0">
                     <img src="{{ asset('img/games/thumb/geoguessr.webp') }}" width="504" height="518" class="img-fluid hero-img"
-                        alt="Image du jeu Nanagames à la une">
+                        alt="Image du jeu BananeGames à la une">
                 </div>
             </div>
         </div>

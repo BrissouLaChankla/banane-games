@@ -82,7 +82,7 @@
 
                         <div class="form-check mt-4">
                             {{ Form::checkbox('newsletter', 1, false, ['id' => 'newsletter', 'class' => 'form-check-input']) }}
-                            {{ Form::label('newsletter', 'J’accepte que mes informations soient utilisées par Nanagames afin de me recontacter.', ['class' => 'ms-1 form-check-label text-muted small']) }}
+                            {{ Form::label('newsletter', 'J’accepte que mes informations soient utilisées par BananeGames afin de me recontacter.', ['class' => 'ms-1 form-check-label text-muted small']) }}
 
 
                         </div>
@@ -98,7 +98,7 @@
                 <div class="col-xl-6">
                     <div class="position-relative d-flex justify-content-center pt-6">
                         <img src="{{asset('img/decorations/big-arrow-top-left.webp')}}" class="d-none d-xl-block big-arrow-top-left" alt="Flêche">
-                        <img src="{{ asset('img/mister-nanaba/mister-nanaba-contact.webp') }}" class="w-100" style="max-width:480px" alt="Mister Nanaba contact">
+                        <img src="{{ asset('img/mister-nanaba/mister-nanaba-contact.webp') }}" class="w-100" style="max-width:480px" alt="M. Banane contact">
                     </div>
                 </div>
             </div>

@@ -1,4 +1,4 @@
-<section class="splide team-carousel outside_arrows pb-6" aria-label="Section carousel de l'équipe Nanagames">
+<section class="splide team-carousel outside_arrows pb-6" aria-label="Section carousel de l'équipe BananeGames">
     <div class="splide__track">
           <ul class="splide__list">
             @foreach($members as $member)
